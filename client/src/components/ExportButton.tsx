@@ -7,30 +7,34 @@ import {
   DropdownMenuTrigger,
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
-import { Download, FileText, Loader2 } from "lucide-react";
+import { Download, FileText, Loader2, Video } from "lucide-react";
 import { toast } from "sonner";
 import { exportRelatorioCompletoPDF } from "@/lib/pdfExport";
+import { exportRoteiroVideoPDF, gerarRoteiroPadrao } from "@/lib/roteiroPdfExport";
 
-interface ExportButtonProps {
-  noticias: Array<{
-    id: number;
-    titulo: string;
-    subtitulo: string;
-    resumo: string;
-    fonte: Array<{ nome: string; url: string }>;
-    potencialViral: string;
-    justificativa: string;
-    publicoAlvo: string;
-    anguloEditorial: string;
-    tituloRedes: string;
-    legenda: string;
-    hashtags: string[];
-    categoria: string;
-    impacto: string;
-  }>;
+interface Noticia {
+  id: number;
+  titulo: string;
+  subtitulo: string;
+  resumo: string;
+  fonte: Array<{ nome: string; url: string }>;
+  potencialViral: string;
+  justificativa: string;
+  publicoAlvo: string;
+  anguloEditorial: string;
+  tituloRedes: string;
+  legenda: string;
+  hashtags: string[];
+  categoria: string;
+  impacto: string;
 }
 
-export function ExportButton({ noticias }: ExportButtonProps) {
+interface ExportButtonProps {
+  noticias: Noticia[];
+  noticiaAtual?: Noticia;
+}
+
+export function ExportButton({ noticias, noticiaAtual }: ExportButtonProps) {
   const [isExporting, setIsExporting] = useState(false);
 
   const handleExportPDF = async () => {
@@ -43,6 +47,23 @@ export function ExportButton({ noticias }: ExportButtonProps) {
       console.error(error);
     } finally {
       setIsExporting(false);
+    }
+  };
+
+  const handleExportRoteiroVideo = () => {
+    try {
+      if (!noticiaAtual && noticias.length === 0) {
+        toast.error("Nenhuma notícia disponível");
+        return;
+      }
+      
+      const noticia = noticiaAtual || noticias[0];
+      const roteiro = gerarRoteiroPadrao(noticia);
+      exportRoteiroVideoPDF(noticia, roteiro);
+      toast.success("Roteiro de vídeo exportado com sucesso!");
+    } catch (error) {
+      toast.error("Erro ao exportar roteiro");
+      console.error(error);
     }
   };
 
@@ -115,10 +136,14 @@ export function ExportButton({ noticias }: ExportButtonProps) {
           )}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-48">
+      <DropdownMenuContent align="end" className="w-56">
         <DropdownMenuItem onClick={handleExportPDF} disabled={isExporting}>
           <FileText className="w-4 h-4 mr-2" />
           <span>Relatório Completo (PDF)</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={handleExportRoteiroVideo} disabled={isExporting}>
+          <Video className="w-4 h-4 mr-2" />
+          <span>Roteiro de Vídeo (PDF)</span>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={handleExportJSON}>
