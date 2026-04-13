@@ -2,7 +2,8 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Copy, Download, Share2 } from "lucide-react";
+import { Copy, Download, Share2, FileText } from "lucide-react";
+import { exportNoticiaToPDF } from "@/lib/pdfExport";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -33,12 +34,26 @@ export function NewsDetailModal({
   noticia,
 }: NewsDetailModalProps) {
   const [copied, setCopied] = useState(false);
+  const [exporting, setExporting] = useState(false);
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
     setCopied(true);
     toast.success("Copiado para a área de transferência!");
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleExportPDF = async () => {
+    try {
+      setExporting(true);
+      await exportNoticiaToPDF(noticia);
+      toast.success("PDF exportado com sucesso!");
+    } catch (error) {
+      toast.error("Erro ao exportar PDF");
+      console.error(error);
+    } finally {
+      setExporting(false);
+    }
   };
 
   const downloadAsText = () => {
@@ -257,9 +272,13 @@ ${noticia.fonte.map((f) => `${f.nome}: ${f.url}`).join("\n")}
 
         {/* Ações */}
         <div className="flex gap-2 pt-4 border-t">
-          <Button variant="outline" className="flex-1" onClick={downloadAsText}>
+          <Button variant="outline" size="sm" onClick={handleExportPDF} disabled={exporting}>
+            <FileText className="w-4 h-4 mr-2" />
+            {exporting ? "Exportando..." : "Exportar PDF"}
+          </Button>
+          <Button variant="outline" size="sm" onClick={downloadAsText}>
             <Download className="w-4 h-4 mr-2" />
-            Baixar Análise
+            Baixar TXT
           </Button>
           <Button variant="default" className="flex-1" onClick={() => onOpenChange(false)}>
             Fechar

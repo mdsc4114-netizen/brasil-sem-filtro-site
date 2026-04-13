@@ -11,6 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { BarChart3, TrendingUp, Users, Target } from "lucide-react";
+import { ExportButton } from "@/components/ExportButton";
 import noticiasData from "@/lib/noticias.json";
 
 const noticias = noticiasData as typeof noticiasData;
@@ -163,10 +164,8 @@ export default function Home() {
             </div>
 
             <div className="flex gap-2 w-full md:w-auto">
+              <ExportButton noticias={filteredAndSorted} />
               <Button variant="outline" size="sm">
-                Exportar PDF
-              </Button>
-              <Button variant="default" size="sm">
                 Compartilhar
               </Button>
             </div>
