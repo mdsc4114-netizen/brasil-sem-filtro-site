@@ -1,0 +1,129 @@
+{
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "EUA iniciam bloqueio no estreito de Ormuz após fracasso de acordo com Irã",
+      "subtitulo": "Petróleo dispara acima de US$ 100",
+      "resumo": "A tensão geopolítica no Oriente Médio escalou com o início do bloqueio americano no Estreito de Ormuz, uma rota marítima crucial para o transporte de petróleo. A medida ocorre após o fracasso das negociações de paz entre Estados Unidos e Irã, resultando na imediata disparada dos preços do petróleo para mais de US$ 100 o barril.",
+      "fonte": [
+        {
+          "nome": "Poder360",
+          "url": "https://www.poder360.com.br/poder-internacional/eua-iniciam-bloqueio-no-estreito-de-ormuz-nesta-2a-feira/"
+        },
+        {
+          "nome": "UOL Economia",
+          "url": "https://economia.uol.com.br/noticias/redacao/2026/04/12/petroleo-negocios-segunda-feira-13-de-abril.ghtm"
+        }
+      ],
+      "potencialViral": "Alto",
+      "justificativa": "A notícia combina elementos de geopolítica, economia e impacto direto no cotidiano do brasileiro. O aumento do preço do petróleo e, consequentemente, dos combustíveis, afeta diretamente o bolso da população, gerando discussões e preocupações.",
+      "publicoAlvo": "Cidadãos preocupados com a economia doméstica, motoristas, profissionais do transporte, investidores, estudantes de relações internacionais e economia",
+      "anguloEditorial": "Abordar o tema explicando a importância estratégica do Estreito de Ormuz, os motivos do bloqueio e as possíveis consequências econômicas para o Brasil",
+      "tituloRedes": "Crise no Oriente Médio: Petróleo dispara e gasolina pode subir no Brasil!",
+      "legenda": "🚨 ALERTA! A tensão entre EUA e Irã no Estreito de Ormuz fez o preço do petróleo disparar para mais de US$ 100! Entenda como esse conflito distante pode impactar diretamente a inflação e o valor dos combustíveis no Brasil.",
+      "hashtags": ["#CriseDoPetroleo", "#Geopolitica", "#EconomiaBrasil", "#Inflacao", "#Combustivel", "#EstreitoDeOrmuz", "#BrasilSemFiltro"],
+      "categoria": "Economia",
+      "impacto": "Muito Alto"
+    },
+    {
+      "id": 2,
+      "titulo": "Governo Lula anuncia pacote bilionário de programas sociais",
+      "subtitulo": "Focado em habitação, saúde e primeira infância",
+      "resumo": "O governo federal, liderado pelo Presidente Lula, anunciou um robusto pacote de investimentos de bilhões de reais em programas sociais. As iniciativas visam fortalecer áreas cruciais como habitação popular, saúde da mulher e desenvolvimento na primeira infância.",
+      "fonte": [
+        {
+          "nome": "BBC Brasil",
+          "url": "https://www.bbc.com/portuguese/articles/cy716x7kkzvo"
+        },
+        {
+          "nome": "Agenda do Planalto",
+          "url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/agenda-do-presidente-da-republica-lula/agenda-do-presidente-da-republica/2026-04-13"
+        }
+      ],
+      "potencialViral": "Alto",
+      "justificativa": "Notícias sobre programas sociais e investimentos governamentais sempre geram grande engajamento devido ao impacto direto na vida da população. A polarização política em torno dos gastos públicos intensifica o debate.",
+      "publicoAlvo": "Beneficiários de programas sociais, famílias de baixa renda, eleitores de diferentes espectros políticos, estudantes de ciências sociais",
+      "anguloEditorial": "Explicar os detalhes dos programas anunciados, os valores envolvidos e as áreas beneficiadas. Apresentar argumentos a favor e contra de forma equilibrada",
+      "tituloRedes": "Lula libera bilhões para programas sociais: Entenda o impacto!",
+      "legenda": "💰 O governo Lula anunciou um pacote bilionário para habitação, saúde da mulher e primeira infância! Mas a medida já gera debate: será a solução para a economia ou um risco fiscal?",
+      "hashtags": ["#ProgramasSociais", "#GovernoLula", "#Economia", "#PoliticaBrasil", "#Saude", "#Habitacao", "#BrasilSemFiltro"],
+      "categoria": "Política",
+      "impacto": "Alto"
+    },
+    {
+      "id": 3,
+      "titulo": "Ministro da Fazenda inicia agenda internacional nos EUA e Europa",
+      "subtitulo": "Em busca de investimentos e estabilidade econômica",
+      "resumo": "O Ministro da Fazenda, Dario Durigan, embarcou em uma importante agenda internacional, com compromissos nos Estados Unidos e na Europa. A viagem tem como principal objetivo atrair investimentos estrangeiros para o Brasil e buscar estabilidade econômica em um cenário global volátil.",
+      "fonte": [
+        {
+          "nome": "Jornal do Comércio",
+          "url": "https://www.jornaldocomercio.com/economia/2026/04/1244514-ministro-da-fazenda-inicia-agenda-internacional-nos-eua-e-na-europa.html"
+        },
+        {
+          "nome": "CNN Brasil",
+          "url": "https://www.cnnbrasil.com.br/economia/ministro-da-fazenda-inicia-agenda-internacional-nos-eua-e-na-europa/"
+        }
+      ],
+      "potencialViral": "Médio/Alto",
+      "justificativa": "A notícia é relevante para o público interessado em economia e política externa. A busca por investimentos e a tentativa de estabilizar a economia em um cenário de crise global geram interesse.",
+      "publicoAlvo": "Investidores, empresários, economistas, estudantes de economia e relações internacionais",
+      "anguloEditorial": "Explicar os objetivos da viagem, os países visitados e os temas em pauta. Analisar as expectativas e desafios dessa agenda internacional",
+      "tituloRedes": "Missão Bilionária: Ministro da Fazenda busca investimentos para o Brasil!",
+      "legenda": "✈️ O Ministro da Fazenda, Dario Durigan, está em uma turnê crucial pelos EUA e Europa! Em meio à crise global, ele busca investimentos e estabilidade para a economia brasileira.",
+      "hashtags": ["#Economia", "#Investimento", "#Brasil", "#PoliticaExterna", "#MinistroDaFazenda", "#BrasilSemFiltro"],
+      "categoria": "Economia",
+      "impacto": "Médio"
+    },
+    {
+      "id": 4,
+      "titulo": "Redes Sociais superam TV como principal fonte de informação política no Brasil",
+      "subtitulo": "Estudo revela mudança histórica no consumo de informação",
+      "resumo": "Uma pesquisa recente da Quaest revelou uma mudança histórica no consumo de informação política no Brasil: pela primeira vez, as redes sociais (39%) superaram a televisão (34%) como principal fonte para os brasileiros. Este dado indica uma profunda transformação no cenário midiático e político do país.",
+      "fonte": [
+        {
+          "nome": "Poder360",
+          "url": "https://www.poder360.com.br/poder-midia/redes-sociais-superam-tv-como-fonte-de-informacao-politica/"
+        },
+        {
+          "nome": "Pesquisa Quaest",
+          "url": "https://www.quaest.com.br/"
+        }
+      ],
+      "potencialViral": "Alto",
+      "justificativa": "Esta notícia é de alta relevância para o público que consome conteúdo em redes sociais. O fato de as próprias redes sociais serem o tema cria um efeito de metalinguagem que tende a viralizar.",
+      "publicoAlvo": "Usuários ativos de redes sociais, criadores de conteúdo, influenciadores digitais, jornalistas, estudantes de comunicação",
+      "anguloEditorial": "Analisar os dados da pesquisa, apresentando os números e metodologias. Discutir as implicações dessa mudança para a democracia e o debate público",
+      "tituloRedes": "Redes Sociais > TV: Onde você se informa sobre política?",
+      "legenda": "📊 DADOS RECENTES! As redes sociais acabam de superar a TV como principal fonte de informação política no Brasil! 🤯 O que essa virada histórica significa para a democracia, as eleições e o combate à desinformação?",
+      "hashtags": ["#RedesSociais", "#InformacaoPolitica", "#Eleicoes2026", "#MidiaDigital", "#FakeNews", "#BrasilSemFiltro"],
+      "categoria": "Mídia",
+      "impacto": "Alto"
+    },
+    {
+      "id": 5,
+      "titulo": "Derrota de Viktor Orbán na Hungria: Repercussões para a direita brasileira",
+      "subtitulo": "Mudança no cenário da direita conservadora global",
+      "resumo": "O primeiro-ministro húngaro, Viktor Orbán, conhecido por suas políticas conservadoras e nacionalistas, sofreu uma derrota significativa nas recentes eleições, marcando um revés para a direita populista na Europa. Este resultado tem gerado discussões sobre suas possíveis repercussões para movimentos da direita conservadora no Brasil.",
+      "fonte": [
+        {
+          "nome": "Jovem Pan",
+          "url": "https://jovempan.com.br/noticias/mundo/derrota-de-orban-na-hungria-repercute-na-direita-brasileira.html"
+        },
+        {
+          "nome": "CNN Brasil",
+          "url": "https://www.cnnbrasil.com.br/internacional/derrota-de-viktor-orban-na-hungria-o-que-significa-para-a-direita-brasileira/"
+        }
+      ],
+      "potencialViral": "Alto",
+      "justificativa": "Notícias que envolvem figuras políticas internacionais e suas conexões com a política brasileira têm alto potencial de viralização, especialmente em um cenário de polarização ideológica.",
+      "publicoAlvo": "Eleitores de direita e esquerda, ativistas políticos, estudantes de ciência política, público interessado em ideologias políticas",
+      "anguloEditorial": "Explicar quem é Orbán, suas políticas e o contexto de sua derrota. Analisar as possíveis razões para o resultado eleitoral. Explorar as conexões ideológicas com a direita brasileira",
+      "tituloRedes": "Orbán perde na Hungria: Sinal de alerta para a direita brasileira?",
+      "legenda": "🇭🇺 A derrota de Viktor Orbán na Hungria está agitando o cenário político global! 🌍 Quais as implicações para a direita conservadora no Brasil e para as alianças políticas?",
+      "hashtags": ["#ViktorOrban", "#Hungria", "#DireitaBrasil", "#PoliticaInternacional", "#Conservadorismo", "#BrasilSemFiltro"],
+      "categoria": "Política Internacional",
+      "impacto": "Alto"
+    }
+  ]
+}
