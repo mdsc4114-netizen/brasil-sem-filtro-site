@@ -18,49 +18,6 @@ interface Noticia {
   impacto: string;
 }
 
-// Função auxiliar para remover emojis e caracteres especiais problemáticos
-function sanitizeText(text: string): string {
-  return text
-    .replace(/[^\w\s\-.,!?()&@#áéíóúâêôãõçñ]/g, '') // Remove caracteres especiais problemáticos
-    .trim();
-}
-
-// Função auxiliar para calcular altura do texto
-function getTextHeight(doc: jsPDF, text: string, width: number, fontSize: number): number {
-  doc.setFontSize(fontSize);
-  const lines = doc.splitTextToSize(text, width);
-  return lines.length * (fontSize * 0.35);
-}
-
-// Função auxiliar para adicionar seção
-function addSection(
-  doc: jsPDF,
-  title: string,
-  content: string,
-  x: number,
-  y: number,
-  width: number
-): number {
-  const primaryColor: [number, number, number] = [26, 58, 82];
-  const textColor: [number, number, number] = [44, 62, 80];
-
-  // Título da seção
-  doc.setFontSize(11);
-  doc.setFont('helvetica', 'bold');
-  doc.setTextColor(...primaryColor);
-  doc.text(title, x, y);
-  y += 7;
-
-  // Conteúdo
-  doc.setFontSize(9);
-  doc.setFont('helvetica', 'normal');
-  doc.setTextColor(...textColor);
-  const lines = doc.splitTextToSize(sanitizeText(content), width - 5);
-  doc.text(lines, x + 5, y);
-
-  return y + lines.length * 5;
-}
-
 /**
  * Exporta uma notícia individual para PDF com formatação profissional
  */
@@ -83,7 +40,7 @@ export async function exportNoticiaToPDF(noticia: Noticia): Promise<void> {
   const textColor: [number, number, number] = [44, 62, 80]; // #2C3E50
   const lightGray: [number, number, number] = [224, 231, 241]; // #E0E7F1
 
-  // Header com logo e data
+  // ===== HEADER =====
   doc.setFillColor(...primaryColor);
   doc.rect(0, 0, pageWidth, 25, 'F');
 
@@ -98,29 +55,29 @@ export async function exportNoticiaToPDF(noticia: Noticia): Promise<void> {
 
   yPosition = 35;
 
-  // Título
+  // ===== TITULO PRINCIPAL =====
   doc.setTextColor(...textColor);
   doc.setFontSize(16);
   doc.setFont('helvetica', 'bold');
-  const titleLines = doc.splitTextToSize(sanitizeText(noticia.titulo), contentWidth);
+  const titleLines = doc.splitTextToSize(noticia.titulo, contentWidth);
   doc.text(titleLines, margin, yPosition);
   yPosition += titleLines.length * 7 + 5;
 
-  // Subtítulo
+  // ===== SUBTITULO =====
   doc.setFontSize(11);
   doc.setFont('helvetica', 'bold');
   doc.setTextColor(...accentColor);
-  doc.text(sanitizeText(noticia.subtitulo), margin, yPosition);
+  doc.text(noticia.subtitulo, margin, yPosition);
   yPosition += 8;
 
-  // Separador
+  // ===== SEPARADOR =====
   doc.setDrawColor(...accentColor);
   doc.setLineWidth(0.5);
   doc.line(margin, yPosition, pageWidth - margin, yPosition);
   yPosition += 5;
 
-  // Badges de categoria e potencial viral
-  doc.setFontSize(9);
+  // ===== BADGES =====
+  doc.setFontSize(8);
   doc.setFont('helvetica', 'bold');
   doc.setTextColor(255, 255, 255);
 
@@ -145,78 +102,130 @@ export async function exportNoticiaToPDF(noticia: Noticia): Promise<void> {
   doc.rect(margin + 70, yPosition - 3, 30, 6, 'F');
   doc.text(`Impacto: ${noticia.impacto}`, margin + 72, yPosition + 1);
 
-  yPosition += 10;
+  yPosition += 12;
 
-  // Seção: Resumo
-  yPosition = addSection(doc, 'RESUMO', noticia.resumo, margin, yPosition, contentWidth) + 5;
+  // ===== RESUMO =====
+  doc.setFontSize(10);
+  doc.setFont('helvetica', 'bold');
+  doc.setTextColor(...primaryColor);
+  doc.text('RESUMO', margin, yPosition);
+  yPosition += 5;
 
-  // Seção: Justificativa
-  yPosition = addSection(doc, 'JUSTIFICATIVA DE VIRALIZACAO', noticia.justificativa, margin, yPosition, contentWidth) + 5;
+  doc.setFontSize(9);
+  doc.setFont('helvetica', 'normal');
+  doc.setTextColor(...textColor);
+  const resumoLines = doc.splitTextToSize(noticia.resumo, contentWidth - 5);
+  doc.text(resumoLines, margin + 5, yPosition);
+  yPosition += resumoLines.length * 4 + 5;
 
   // Verificar se precisa de nova página
-  if (yPosition > pageHeight - 40) {
+  if (yPosition > pageHeight - 50) {
     doc.addPage();
     yPosition = margin;
   }
 
-  // Seção: Público-alvo
-  yPosition = addSection(doc, 'PUBLICO-ALVO', noticia.publicoAlvo, margin, yPosition, contentWidth) + 5;
+  // ===== JUSTIFICATIVA =====
+  doc.setFontSize(10);
+  doc.setFont('helvetica', 'bold');
+  doc.setTextColor(...primaryColor);
+  doc.text('JUSTIFICATIVA DE VIRALIZACAO', margin, yPosition);
+  yPosition += 5;
 
-  // Seção: Ângulo Editorial
-  yPosition = addSection(doc, 'ANGULO EDITORIAL IMPARCIAL', noticia.anguloEditorial, margin, yPosition, contentWidth) + 5;
+  doc.setFontSize(9);
+  doc.setFont('helvetica', 'normal');
+  doc.setTextColor(...textColor);
+  const justLines = doc.splitTextToSize(noticia.justificativa, contentWidth - 5);
+  doc.text(justLines, margin + 5, yPosition);
+  yPosition += justLines.length * 4 + 5;
+
+  // ===== PUBLICO-ALVO =====
+  doc.setFontSize(10);
+  doc.setFont('helvetica', 'bold');
+  doc.setTextColor(...primaryColor);
+  doc.text('PUBLICO-ALVO', margin, yPosition);
+  yPosition += 5;
+
+  doc.setFontSize(9);
+  doc.setFont('helvetica', 'normal');
+  doc.setTextColor(...textColor);
+  const publicoLines = doc.splitTextToSize(noticia.publicoAlvo, contentWidth - 5);
+  doc.text(publicoLines, margin + 5, yPosition);
+  yPosition += publicoLines.length * 4 + 5;
 
   // Verificar se precisa de nova página
-  if (yPosition > pageHeight - 60) {
+  if (yPosition > pageHeight - 50) {
     doc.addPage();
     yPosition = margin;
   }
 
-  // Seção: Conteúdo para Redes Sociais
-  doc.setFontSize(11);
+  // ===== ANGULO EDITORIAL =====
+  doc.setFontSize(10);
+  doc.setFont('helvetica', 'bold');
+  doc.setTextColor(...primaryColor);
+  doc.text('ANGULO EDITORIAL IMPARCIAL', margin, yPosition);
+  yPosition += 5;
+
+  doc.setFontSize(9);
+  doc.setFont('helvetica', 'normal');
+  doc.setTextColor(...textColor);
+  const anguloLines = doc.splitTextToSize(noticia.anguloEditorial, contentWidth - 5);
+  doc.text(anguloLines, margin + 5, yPosition);
+  yPosition += anguloLines.length * 4 + 5;
+
+  // ===== CONTEÚDO PARA REDES SOCIAIS =====
+  doc.setFontSize(10);
   doc.setFont('helvetica', 'bold');
   doc.setTextColor(...primaryColor);
   doc.text('CONTEUDO PARA REDES SOCIAIS', margin, yPosition);
-  yPosition += 7;
+  yPosition += 5;
 
   // Título para redes
-  doc.setFontSize(10);
+  doc.setFontSize(9);
   doc.setFont('helvetica', 'bold');
   doc.setTextColor(...textColor);
   doc.text('Titulo:', margin, yPosition);
-  yPosition += 5;
-  const titleLines2 = doc.splitTextToSize(sanitizeText(noticia.tituloRedes), contentWidth - 5);
-  doc.setFontSize(9);
-  doc.setFont('helvetica', 'normal');
-  doc.text(titleLines2, margin + 5, yPosition);
-  yPosition += titleLines2.length * 5 + 5;
+  yPosition += 4;
 
-  // Legenda
-  doc.setFontSize(10);
+  doc.setFontSize(8);
+  doc.setFont('helvetica', 'normal');
+  const titleRedesLines = doc.splitTextToSize(noticia.tituloRedes, contentWidth - 5);
+  doc.text(titleRedesLines, margin + 5, yPosition);
+  yPosition += titleRedesLines.length * 3 + 4;
+
+  // Verificar se precisa de nova página
+  if (yPosition > pageHeight - 50) {
+    doc.addPage();
+    yPosition = margin;
+  }
+
+  // ===== LEGENDA =====
+  doc.setFontSize(9);
   doc.setFont('helvetica', 'bold');
   doc.setTextColor(...primaryColor);
   doc.text('Legenda:', margin, yPosition);
-  yPosition += 5;
-  const sanitizedLegenda = sanitizeText(noticia.legenda);
-  const legendLines = doc.splitTextToSize(sanitizedLegenda, contentWidth - 5);
-  doc.setFontSize(9);
+  yPosition += 4;
+
+  doc.setFontSize(8);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(...textColor);
+  const legendLines = doc.splitTextToSize(noticia.legenda, contentWidth - 5);
   doc.text(legendLines, margin + 5, yPosition);
-  yPosition += legendLines.length * 5 + 5;
+  yPosition += legendLines.length * 3 + 4;
 
-  // Hashtags
-  doc.setFontSize(10);
+  // ===== HASHTAGS =====
+  doc.setFontSize(9);
   doc.setFont('helvetica', 'bold');
   doc.setTextColor(...primaryColor);
   doc.text('Hashtags:', margin, yPosition);
-  yPosition += 5;
-  const hashtagText = noticia.hashtags.join(' ');
-  const hashtagLines = doc.splitTextToSize(hashtagText, contentWidth - 5);
-  doc.setFontSize(9);
+  yPosition += 4;
+
+  doc.setFontSize(8);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(...accentColor);
+  const hashtagText = noticia.hashtags.join(' ');
+  const hashtagLines = doc.splitTextToSize(hashtagText, contentWidth - 5);
   doc.text(hashtagLines, margin + 5, yPosition);
-  yPosition += hashtagLines.length * 5 + 5;
+  yPosition += hashtagLines.length * 3 + 5;
 
   // Verificar se precisa de nova página
   if (yPosition > pageHeight - 40) {
@@ -224,27 +233,31 @@ export async function exportNoticiaToPDF(noticia: Noticia): Promise<void> {
     yPosition = margin;
   }
 
-  // Seção: Fontes
-  doc.setFontSize(11);
+  // ===== FONTES CONFIÁVEIS =====
+  doc.setFontSize(10);
   doc.setFont('helvetica', 'bold');
   doc.setTextColor(...primaryColor);
   doc.text('FONTES CONFIAVEIS', margin, yPosition);
-  yPosition += 7;
+  yPosition += 5;
 
-  doc.setFontSize(9);
+  doc.setFontSize(8);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(...textColor);
   noticia.fonte.forEach((fonte) => {
+    doc.setFont('helvetica', 'bold');
     doc.text(`- ${fonte.nome}`, margin + 5, yPosition);
-    yPosition += 4;
-    const urlLines = doc.splitTextToSize(fonte.url, contentWidth - 10);
+    yPosition += 3;
+    
+    doc.setFont('helvetica', 'normal');
     doc.setTextColor(100, 100, 100);
+    const urlLines = doc.splitTextToSize(fonte.url, contentWidth - 10);
     doc.text(urlLines, margin + 10, yPosition);
-    yPosition += urlLines.length * 3 + 2;
+    yPosition += urlLines.length * 2.5 + 2;
+    
     doc.setTextColor(...textColor);
   });
 
-  // Footer
+  // ===== FOOTER =====
   const totalPages = doc.internal.pages.length - 1;
   for (let i = 1; i <= totalPages; i++) {
     doc.setPage(i);
@@ -281,7 +294,7 @@ export async function exportRelatorioCompletoPDF(noticias: Noticia[]): Promise<v
   const accentColor: [number, number, number] = [212, 175, 55];
   const textColor: [number, number, number] = [44, 62, 80];
 
-  // Página de capa
+  // ===== PÁGINA DE CAPA =====
   doc.setFillColor(...primaryColor);
   doc.rect(0, 0, pageWidth, pageHeight, 'F');
 
@@ -303,7 +316,7 @@ export async function exportRelatorioCompletoPDF(noticias: Noticia[]): Promise<v
   doc.text(`Data: ${new Date().toLocaleDateString('pt-BR')}`, pageWidth / 2, 160, { align: 'center' });
   doc.text(`Total de Noticias: ${noticias.length}`, pageWidth / 2, 170, { align: 'center' });
 
-  // Adicionar página para cada notícia
+  // ===== PÁGINA PARA CADA NOTÍCIA =====
   noticias.forEach((noticia, index) => {
     doc.addPage();
     let yPosition = margin;
@@ -320,7 +333,7 @@ export async function exportRelatorioCompletoPDF(noticias: Noticia[]): Promise<v
     doc.setTextColor(...textColor);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
-    const titleLines = doc.splitTextToSize(sanitizeText(noticia.titulo), contentWidth - 15);
+    const titleLines = doc.splitTextToSize(noticia.titulo, contentWidth - 15);
     doc.text(titleLines, margin + 15, yPosition);
     yPosition += titleLines.length * 6 + 5;
 
@@ -337,50 +350,155 @@ export async function exportRelatorioCompletoPDF(noticias: Noticia[]): Promise<v
     doc.line(margin, yPosition, pageWidth - margin, yPosition);
     yPosition += 5;
 
-    // Resumo
+    // ===== RESUMO =====
     doc.setFontSize(9);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(...primaryColor);
+    doc.text('RESUMO', margin, yPosition);
+    yPosition += 4;
+
+    doc.setFontSize(8);
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(...textColor);
-    const resumoLines = doc.splitTextToSize(sanitizeText(noticia.resumo), contentWidth);
-    doc.text(resumoLines, margin, yPosition);
-    yPosition += resumoLines.length * 4 + 5;
+    const resumoLines = doc.splitTextToSize(noticia.resumo, contentWidth - 5);
+    doc.text(resumoLines, margin + 5, yPosition);
+    yPosition += resumoLines.length * 3 + 3;
 
-    // Justificativa
+    // ===== JUSTIFICATIVA =====
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(...primaryColor);
+    doc.text('JUSTIFICATIVA', margin, yPosition);
+    yPosition += 4;
+
+    doc.setFontSize(8);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(...textColor);
+    const justLines = doc.splitTextToSize(noticia.justificativa, contentWidth - 5);
+    doc.text(justLines, margin + 5, yPosition);
+    yPosition += justLines.length * 3 + 3;
+
+    // Verificar se precisa de nova página
+    if (yPosition > pageHeight - 50) {
+      doc.addPage();
+      yPosition = margin;
+    }
+
+    // ===== PUBLICO-ALVO =====
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(...primaryColor);
+    doc.text('PUBLICO-ALVO', margin, yPosition);
+    yPosition += 4;
+
+    doc.setFontSize(8);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(...textColor);
+    const publicoLines = doc.splitTextToSize(noticia.publicoAlvo, contentWidth - 5);
+    doc.text(publicoLines, margin + 5, yPosition);
+    yPosition += publicoLines.length * 3 + 3;
+
+    // ===== ANGULO EDITORIAL =====
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(...primaryColor);
+    doc.text('ANGULO EDITORIAL', margin, yPosition);
+    yPosition += 4;
+
+    doc.setFontSize(8);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(...textColor);
+    const anguloLines = doc.splitTextToSize(noticia.anguloEditorial, contentWidth - 5);
+    doc.text(anguloLines, margin + 5, yPosition);
+    yPosition += anguloLines.length * 3 + 3;
+
+    // Verificar se precisa de nova página
+    if (yPosition > pageHeight - 50) {
+      doc.addPage();
+      yPosition = margin;
+    }
+
+    // ===== CONTEÚDO PARA REDES SOCIAIS =====
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(...primaryColor);
+    doc.text('CONTEUDO PARA REDES SOCIAIS', margin, yPosition);
+    yPosition += 4;
+
+    // Título
+    doc.setFontSize(8);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(...textColor);
+    doc.text('Titulo:', margin, yPosition);
+    yPosition += 3;
+
+    doc.setFontSize(7);
+    doc.setFont('helvetica', 'normal');
+    const titleRedesLines = doc.splitTextToSize(noticia.tituloRedes, contentWidth - 5);
+    doc.text(titleRedesLines, margin + 5, yPosition);
+    yPosition += titleRedesLines.length * 2.5 + 2;
+
+    // Legenda
     doc.setFontSize(8);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(...primaryColor);
-    doc.text('Justificativa:', margin, yPosition);
-    yPosition += 4;
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(...textColor);
-    const justLines = doc.splitTextToSize(sanitizeText(noticia.justificativa), contentWidth - 5);
-    doc.text(justLines, margin + 5, yPosition);
-    yPosition += justLines.length * 3 + 4;
+    doc.text('Legenda:', margin, yPosition);
+    yPosition += 3;
 
-    // Público-alvo
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(...primaryColor);
-    doc.text('Publico-alvo:', margin, yPosition);
-    yPosition += 4;
+    doc.setFontSize(7);
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(...textColor);
-    const publicoLines = doc.splitTextToSize(sanitizeText(noticia.publicoAlvo), contentWidth - 5);
-    doc.text(publicoLines, margin + 5, yPosition);
-    yPosition += publicoLines.length * 3 + 4;
+    const legendLines = doc.splitTextToSize(noticia.legenda, contentWidth - 5);
+    doc.text(legendLines, margin + 5, yPosition);
+    yPosition += legendLines.length * 2.5 + 2;
 
     // Hashtags
+    doc.setFontSize(8);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(...primaryColor);
     doc.text('Hashtags:', margin, yPosition);
-    yPosition += 4;
+    yPosition += 3;
+
+    doc.setFontSize(7);
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(...accentColor);
     const hashtagText = noticia.hashtags.join(' ');
     const hashtagLines = doc.splitTextToSize(hashtagText, contentWidth - 5);
     doc.text(hashtagLines, margin + 5, yPosition);
+    yPosition += hashtagLines.length * 2.5 + 3;
+
+    // Verificar se precisa de nova página
+    if (yPosition > pageHeight - 40) {
+      doc.addPage();
+      yPosition = margin;
+    }
+
+    // ===== FONTES CONFIÁVEIS =====
+    doc.setFontSize(8);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(...primaryColor);
+    doc.text('FONTES CONFIAVEIS', margin, yPosition);
+    yPosition += 3;
+
+    doc.setFontSize(7);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(...textColor);
+    noticia.fonte.forEach((fonte) => {
+      doc.setFont('helvetica', 'bold');
+      doc.text(`- ${fonte.nome}`, margin + 5, yPosition);
+      yPosition += 2.5;
+      
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(100, 100, 100);
+      const urlLines = doc.splitTextToSize(fonte.url, contentWidth - 10);
+      doc.text(urlLines, margin + 10, yPosition);
+      yPosition += urlLines.length * 2 + 1;
+      
+      doc.setTextColor(...textColor);
+    });
   });
 
-  // Footer com número de páginas
+  // ===== FOOTER COM NÚMERO DE PÁGINAS =====
   const totalPages = doc.internal.pages.length - 1;
   for (let i = 1; i <= totalPages; i++) {
     doc.setPage(i);
@@ -428,11 +546,11 @@ export function exportToCSV(noticias: Noticia[]): void {
 
   const rows = noticias.map((n) => [
     n.id,
-    sanitizeText(n.titulo),
+    n.titulo,
     n.categoria,
     n.potencialViral,
     n.impacto,
-    sanitizeText(n.resumo),
+    n.resumo,
     n.hashtags.join(';'),
   ]);
 
