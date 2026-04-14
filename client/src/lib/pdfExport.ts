@@ -18,6 +18,49 @@ interface Noticia {
   impacto: string;
 }
 
+// Função auxiliar para remover emojis e caracteres especiais problemáticos
+function sanitizeText(text: string): string {
+  return text
+    .replace(/[^\w\s\-.,!?()&@#áéíóúâêôãõçñ]/g, '') // Remove caracteres especiais problemáticos
+    .trim();
+}
+
+// Função auxiliar para calcular altura do texto
+function getTextHeight(doc: jsPDF, text: string, width: number, fontSize: number): number {
+  doc.setFontSize(fontSize);
+  const lines = doc.splitTextToSize(text, width);
+  return lines.length * (fontSize * 0.35);
+}
+
+// Função auxiliar para adicionar seção
+function addSection(
+  doc: jsPDF,
+  title: string,
+  content: string,
+  x: number,
+  y: number,
+  width: number
+): number {
+  const primaryColor: [number, number, number] = [26, 58, 82];
+  const textColor: [number, number, number] = [44, 62, 80];
+
+  // Título da seção
+  doc.setFontSize(11);
+  doc.setFont('helvetica', 'bold');
+  doc.setTextColor(...primaryColor);
+  doc.text(title, x, y);
+  y += 7;
+
+  // Conteúdo
+  doc.setFontSize(9);
+  doc.setFont('helvetica', 'normal');
+  doc.setTextColor(...textColor);
+  const lines = doc.splitTextToSize(sanitizeText(content), width - 5);
+  doc.text(lines, x + 5, y);
+
+  return y + lines.length * 5;
+}
+
 /**
  * Exporta uma notícia individual para PDF com formatação profissional
  */
@@ -43,15 +86,15 @@ export async function exportNoticiaToPDF(noticia: Noticia): Promise<void> {
   // Header com logo e data
   doc.setFillColor(...primaryColor);
   doc.rect(0, 0, pageWidth, 25, 'F');
-  
+
   doc.setTextColor(255, 255, 255);
   doc.setFontSize(18);
   doc.setFont('helvetica', 'bold');
   doc.text('BRASIL SEM FILTRO', margin, 12);
-  
+
   doc.setFontSize(9);
   doc.setFont('helvetica', 'normal');
-  doc.text(`Análise de Notícia - ${new Date().toLocaleDateString('pt-BR')}`, margin, 19);
+  doc.text(`Analise de Noticia - ${new Date().toLocaleDateString('pt-BR')}`, margin, 19);
 
   yPosition = 35;
 
@@ -59,7 +102,7 @@ export async function exportNoticiaToPDF(noticia: Noticia): Promise<void> {
   doc.setTextColor(...textColor);
   doc.setFontSize(16);
   doc.setFont('helvetica', 'bold');
-  const titleLines = doc.splitTextToSize(noticia.titulo, contentWidth);
+  const titleLines = doc.splitTextToSize(sanitizeText(noticia.titulo), contentWidth);
   doc.text(titleLines, margin, yPosition);
   yPosition += titleLines.length * 7 + 5;
 
@@ -67,7 +110,7 @@ export async function exportNoticiaToPDF(noticia: Noticia): Promise<void> {
   doc.setFontSize(11);
   doc.setFont('helvetica', 'bold');
   doc.setTextColor(...accentColor);
-  doc.text(noticia.subtitulo, margin, yPosition);
+  doc.text(sanitizeText(noticia.subtitulo), margin, yPosition);
   yPosition += 8;
 
   // Separador
@@ -80,38 +123,35 @@ export async function exportNoticiaToPDF(noticia: Noticia): Promise<void> {
   doc.setFontSize(9);
   doc.setFont('helvetica', 'bold');
   doc.setTextColor(255, 255, 255);
-  
-  // Badge de categoria
+
+  // Badge categoria
   doc.setFillColor(...primaryColor);
-  doc.rect(margin, yPosition - 3, 30, 6, 'F');
+  doc.rect(margin, yPosition - 3, 25, 6, 'F');
   doc.text(noticia.categoria, margin + 2, yPosition + 1);
-  
-  // Badge de potencial viral
-  const viralColors: Record<string, [number, number, number]> = {
-    'Alto': [212, 69, 69],
-    'Médio/Alto': [249, 115, 22],
-    'Médio': [234, 179, 8],
-    'Baixo': [107, 114, 128],
+
+  // Badge potencial viral
+  const viralColors: { [key: string]: [number, number, number] } = {
+    Alto: [220, 53, 69],
+    'Médio/Alto': [255, 193, 7],
+    Médio: [255, 193, 7],
+    Baixo: [108, 117, 125],
   };
-  const viralColor: [number, number, number] = viralColors[noticia.potencialViral] || viralColors['Baixo'];
-  doc.setFillColor(...viralColor);
-  doc.rect(margin + 35, yPosition - 3, 35, 6, 'F');
-  doc.text(`Viral: ${noticia.potencialViral}`, margin + 37, yPosition + 1);
-  
+  doc.setFillColor(...(viralColors[noticia.potencialViral] || [108, 117, 125]));
+  doc.rect(margin + 30, yPosition - 3, 35, 6, 'F');
+  doc.text(`Viral: ${noticia.potencialViral}`, margin + 32, yPosition + 1);
+
   // Badge de impacto
   doc.setFillColor(...primaryColor);
-  doc.rect(margin + 75, yPosition - 3, 30, 6, 'F');
-  doc.text(`Impacto: ${noticia.impacto}`, margin + 77, yPosition + 1);
-  
+  doc.rect(margin + 70, yPosition - 3, 30, 6, 'F');
+  doc.text(`Impacto: ${noticia.impacto}`, margin + 72, yPosition + 1);
+
   yPosition += 10;
 
   // Seção: Resumo
-  addSection(doc, 'RESUMO', noticia.resumo, margin, yPosition, contentWidth);
-  yPosition += getTextHeight(doc, noticia.resumo, contentWidth, 10) + 8;
+  yPosition = addSection(doc, 'RESUMO', noticia.resumo, margin, yPosition, contentWidth) + 5;
 
   // Seção: Justificativa
-  addSection(doc, 'JUSTIFICATIVA DE VIRALIZAÇÃO', noticia.justificativa, margin, yPosition, contentWidth);
-  yPosition += getTextHeight(doc, noticia.justificativa, contentWidth, 10) + 8;
+  yPosition = addSection(doc, 'JUSTIFICATIVA DE VIRALIZACAO', noticia.justificativa, margin, yPosition, contentWidth) + 5;
 
   // Verificar se precisa de nova página
   if (yPosition > pageHeight - 40) {
@@ -120,12 +160,10 @@ export async function exportNoticiaToPDF(noticia: Noticia): Promise<void> {
   }
 
   // Seção: Público-alvo
-  addSection(doc, 'PÚBLICO-ALVO', noticia.publicoAlvo, margin, yPosition, contentWidth);
-  yPosition += getTextHeight(doc, noticia.publicoAlvo, contentWidth, 10) + 8;
+  yPosition = addSection(doc, 'PUBLICO-ALVO', noticia.publicoAlvo, margin, yPosition, contentWidth) + 5;
 
   // Seção: Ângulo Editorial
-  addSection(doc, 'ÂNGULO EDITORIAL IMPARCIAL', noticia.anguloEditorial, margin, yPosition, contentWidth);
-  yPosition += getTextHeight(doc, noticia.anguloEditorial, contentWidth, 10) + 8;
+  yPosition = addSection(doc, 'ANGULO EDITORIAL IMPARCIAL', noticia.anguloEditorial, margin, yPosition, contentWidth) + 5;
 
   // Verificar se precisa de nova página
   if (yPosition > pageHeight - 60) {
@@ -137,17 +175,18 @@ export async function exportNoticiaToPDF(noticia: Noticia): Promise<void> {
   doc.setFontSize(11);
   doc.setFont('helvetica', 'bold');
   doc.setTextColor(...primaryColor);
-  doc.text('CONTEÚDO PARA REDES SOCIAIS', margin, yPosition);
+  doc.text('CONTEUDO PARA REDES SOCIAIS', margin, yPosition);
   yPosition += 7;
 
   // Título para redes
   doc.setFontSize(10);
-  doc.setFont('helvetica', 'normal');
+  doc.setFont('helvetica', 'bold');
   doc.setTextColor(...textColor);
-  doc.text('Título:', margin, yPosition);
+  doc.text('Titulo:', margin, yPosition);
   yPosition += 5;
-  const titleLines2 = doc.splitTextToSize(noticia.tituloRedes, contentWidth - 5);
+  const titleLines2 = doc.splitTextToSize(sanitizeText(noticia.tituloRedes), contentWidth - 5);
   doc.setFontSize(9);
+  doc.setFont('helvetica', 'normal');
   doc.text(titleLines2, margin + 5, yPosition);
   yPosition += titleLines2.length * 5 + 5;
 
@@ -157,7 +196,8 @@ export async function exportNoticiaToPDF(noticia: Noticia): Promise<void> {
   doc.setTextColor(...primaryColor);
   doc.text('Legenda:', margin, yPosition);
   yPosition += 5;
-  const legendLines = doc.splitTextToSize(noticia.legenda, contentWidth - 5);
+  const sanitizedLegenda = sanitizeText(noticia.legenda);
+  const legendLines = doc.splitTextToSize(sanitizedLegenda, contentWidth - 5);
   doc.setFontSize(9);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(...textColor);
@@ -188,14 +228,14 @@ export async function exportNoticiaToPDF(noticia: Noticia): Promise<void> {
   doc.setFontSize(11);
   doc.setFont('helvetica', 'bold');
   doc.setTextColor(...primaryColor);
-  doc.text('FONTES CONFIÁVEIS', margin, yPosition);
+  doc.text('FONTES CONFIAVEIS', margin, yPosition);
   yPosition += 7;
 
   doc.setFontSize(9);
   doc.setFont('helvetica', 'normal');
   doc.setTextColor(...textColor);
   noticia.fonte.forEach((fonte) => {
-    doc.text(`• ${fonte.nome}`, margin + 5, yPosition);
+    doc.text(`- ${fonte.nome}`, margin + 5, yPosition);
     yPosition += 4;
     const urlLines = doc.splitTextToSize(fonte.url, contentWidth - 10);
     doc.setTextColor(100, 100, 100);
@@ -211,7 +251,7 @@ export async function exportNoticiaToPDF(noticia: Noticia): Promise<void> {
     doc.setFontSize(8);
     doc.setTextColor(150, 150, 150);
     doc.text(
-      `Página ${i} de ${totalPages}`,
+      `Pagina ${i} de ${totalPages}`,
       pageWidth / 2,
       pageHeight - 10,
       { align: 'center' }
@@ -252,16 +292,16 @@ export async function exportRelatorioCompletoPDF(noticias: Noticia[]): Promise<v
 
   doc.setFontSize(24);
   doc.setFont('helvetica', 'normal');
-  doc.text('Relatório de Análise de Notícias', pageWidth / 2, 110, { align: 'center' });
+  doc.text('Relatorio de Analise de Noticias', pageWidth / 2, 110, { align: 'center' });
 
   doc.setFontSize(14);
   doc.setTextColor(...accentColor);
-  doc.text('Com Potencial de Viralização', pageWidth / 2, 130, { align: 'center' });
+  doc.text('Com Potencial de Viralizacao', pageWidth / 2, 130, { align: 'center' });
 
   doc.setFontSize(11);
   doc.setTextColor(200, 200, 200);
   doc.text(`Data: ${new Date().toLocaleDateString('pt-BR')}`, pageWidth / 2, 160, { align: 'center' });
-  doc.text(`Total de Notícias: ${noticias.length}`, pageWidth / 2, 170, { align: 'center' });
+  doc.text(`Total de Noticias: ${noticias.length}`, pageWidth / 2, 170, { align: 'center' });
 
   // Adicionar página para cada notícia
   noticias.forEach((noticia, index) => {
@@ -280,56 +320,55 @@ export async function exportRelatorioCompletoPDF(noticias: Noticia[]): Promise<v
     doc.setTextColor(...textColor);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
-    const titleLines = doc.splitTextToSize(noticia.titulo, contentWidth - 20);
-    doc.text(titleLines, margin + 15, yPosition + 3);
+    const titleLines = doc.splitTextToSize(sanitizeText(noticia.titulo), contentWidth - 15);
+    doc.text(titleLines, margin + 15, yPosition);
     yPosition += titleLines.length * 6 + 5;
 
-    // Subtítulo
-    doc.setFontSize(10);
-    doc.setFont('helvetica', 'bold');
+    // Categoria e potencial viral
+    doc.setFontSize(9);
+    doc.setFont('helvetica', 'normal');
     doc.setTextColor(...accentColor);
-    doc.text(noticia.subtitulo, margin, yPosition);
-    yPosition += 6;
+    doc.text(`${noticia.categoria} | Viral: ${noticia.potencialViral}`, margin, yPosition);
+    yPosition += 5;
 
     // Separador
     doc.setDrawColor(...accentColor);
-    doc.setLineWidth(0.5);
+    doc.setLineWidth(0.3);
     doc.line(margin, yPosition, pageWidth - margin, yPosition);
     yPosition += 5;
 
     // Resumo
-    addSection(doc, 'Resumo', noticia.resumo, margin, yPosition, contentWidth);
-    yPosition += getTextHeight(doc, noticia.resumo, contentWidth, 9) + 6;
-
-    // Potencial Viral e Impacto
     doc.setFontSize(9);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(...primaryColor);
-    doc.text(`Potencial Viral: ${noticia.potencialViral} | Impacto: ${noticia.impacto}`, margin, yPosition);
-    yPosition += 6;
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(...textColor);
+    const resumoLines = doc.splitTextToSize(sanitizeText(noticia.resumo), contentWidth);
+    doc.text(resumoLines, margin, yPosition);
+    yPosition += resumoLines.length * 4 + 5;
 
     // Justificativa
-    addSection(doc, 'Justificativa', noticia.justificativa, margin, yPosition, contentWidth);
-    yPosition += getTextHeight(doc, noticia.justificativa, contentWidth, 9) + 6;
+    doc.setFontSize(8);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(...primaryColor);
+    doc.text('Justificativa:', margin, yPosition);
+    yPosition += 4;
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(...textColor);
+    const justLines = doc.splitTextToSize(sanitizeText(noticia.justificativa), contentWidth - 5);
+    doc.text(justLines, margin + 5, yPosition);
+    yPosition += justLines.length * 3 + 4;
 
     // Público-alvo
-    addSection(doc, 'Público-alvo', noticia.publicoAlvo, margin, yPosition, contentWidth);
-    yPosition += getTextHeight(doc, noticia.publicoAlvo, contentWidth, 9) + 6;
-
-    // Ângulo Editorial
-    addSection(doc, 'Ângulo Editorial', noticia.anguloEditorial, margin, yPosition, contentWidth);
-    yPosition += getTextHeight(doc, noticia.anguloEditorial, contentWidth, 9) + 6;
-
-    // Título para redes
-    addSection(doc, 'Título para Redes Sociais', noticia.tituloRedes, margin, yPosition, contentWidth);
-    yPosition += getTextHeight(doc, noticia.tituloRedes, contentWidth, 9) + 6;
-
-    // Legenda
-    addSection(doc, 'Legenda', noticia.legenda, margin, yPosition, contentWidth);
-    yPosition += getTextHeight(doc, noticia.legenda, contentWidth, 9) + 6;
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(...primaryColor);
+    doc.text('Publico-alvo:', margin, yPosition);
+    yPosition += 4;
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(...textColor);
+    const publicoLines = doc.splitTextToSize(sanitizeText(noticia.publicoAlvo), contentWidth - 5);
+    doc.text(publicoLines, margin + 5, yPosition);
+    yPosition += publicoLines.length * 3 + 4;
 
     // Hashtags
-    doc.setFontSize(9);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(...primaryColor);
     doc.text('Hashtags:', margin, yPosition);
@@ -337,61 +376,76 @@ export async function exportRelatorioCompletoPDF(noticias: Noticia[]): Promise<v
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(...accentColor);
     const hashtagText = noticia.hashtags.join(' ');
-    const hashtagLines = doc.splitTextToSize(hashtagText, contentWidth);
-    doc.text(hashtagLines, margin, yPosition);
+    const hashtagLines = doc.splitTextToSize(hashtagText, contentWidth - 5);
+    doc.text(hashtagLines, margin + 5, yPosition);
   });
 
-  // Footer em todas as páginas
+  // Footer com número de páginas
   const totalPages = doc.internal.pages.length - 1;
   for (let i = 1; i <= totalPages; i++) {
     doc.setPage(i);
     doc.setFontSize(8);
     doc.setTextColor(150, 150, 150);
     doc.text(
-      `Página ${i} de ${totalPages}`,
+      `Pagina ${i} de ${totalPages}`,
       pageWidth / 2,
       pageHeight - 10,
       { align: 'center' }
     );
   }
 
-  doc.save('brasil-sem-filtro-relatorio-completo.pdf');
+  // Download
+  doc.save(`relatorio-completo-${new Date().toISOString().split('T')[0]}.pdf`);
 }
 
 /**
- * Função auxiliar para adicionar uma seção com título e conteúdo
+ * Exporta dados em formato JSON
  */
-function addSection(
-  doc: jsPDF,
-  title: string,
-  content: string,
-  x: number,
-  y: number,
-  width: number
-): void {
-  doc.setFontSize(10);
-  doc.setFont('helvetica', 'bold');
-  doc.setTextColor(26, 58, 82);
-  doc.text(title, x, y);
-  y += 5;
-
-  doc.setFontSize(9);
-  doc.setFont('helvetica', 'normal');
-  doc.setTextColor(44, 62, 80);
-  const lines = doc.splitTextToSize(content, width);
-  doc.text(lines, x, y);
+export function exportToJSON(noticias: Noticia[]): void {
+  const dataStr = JSON.stringify(noticias, null, 2);
+  const dataBlob = new Blob([dataStr], { type: 'application/json' });
+  const url = URL.createObjectURL(dataBlob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `noticias-${new Date().toISOString().split('T')[0]}.json`;
+  link.click();
+  URL.revokeObjectURL(url);
 }
 
 /**
- * Função auxiliar para calcular a altura do texto
+ * Exporta dados em formato CSV
  */
-function getTextHeight(
-  doc: jsPDF,
-  text: string,
-  width: number,
-  fontSize: number
-): number {
-  doc.setFontSize(fontSize);
-  const lines = doc.splitTextToSize(text, width);
-  return lines.length * (fontSize * 0.35);
+export function exportToCSV(noticias: Noticia[]): void {
+  const headers = [
+    'ID',
+    'Titulo',
+    'Categoria',
+    'Potencial Viral',
+    'Impacto',
+    'Resumo',
+    'Hashtags',
+  ];
+
+  const rows = noticias.map((n) => [
+    n.id,
+    sanitizeText(n.titulo),
+    n.categoria,
+    n.potencialViral,
+    n.impacto,
+    sanitizeText(n.resumo),
+    n.hashtags.join(';'),
+  ]);
+
+  const csvContent = [
+    headers.join(','),
+    ...rows.map((row) => row.map((cell) => `"${cell}"`).join(',')),
+  ].join('\n');
+
+  const dataBlob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(dataBlob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `noticias-${new Date().toISOString().split('T')[0]}.csv`;
+  link.click();
+  URL.revokeObjectURL(url);
 }
