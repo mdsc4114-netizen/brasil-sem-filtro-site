@@ -5,6 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Copy, Download, Share2, FileText, Video } from "lucide-react";
 import { exportNoticiaToPDF } from "@/lib/pdfExport";
 import { exportRoteiroVideoPDF, gerarRoteiroPadrao } from "@/lib/roteiroPdfExport";
+import { ExportModal } from "./ExportModal";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -36,6 +37,7 @@ export function NewsDetailModal({
 }: NewsDetailModalProps) {
   const [copied, setCopied] = useState(false);
   const [exporting, setExporting] = useState(false);
+  const [showExportModal, setShowExportModal] = useState(false);
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -45,16 +47,7 @@ export function NewsDetailModal({
   };
 
   const handleExportPDF = async () => {
-    try {
-      setExporting(true);
-      await exportNoticiaToPDF(noticia);
-      toast.success("PDF exportado com sucesso!");
-    } catch (error) {
-      toast.error("Erro ao exportar PDF");
-      console.error(error);
-    } finally {
-      setExporting(false);
-    }
+    setShowExportModal(true);
   };
 
   const handleExportRoteiroVideo = () => {
@@ -284,7 +277,7 @@ ${noticia.fonte.map((f) => `${f.nome}: ${f.url}`).join("\n")}
 
         {/* Ações */}
         <div className="flex gap-2 pt-4 border-t flex-wrap">
-          <Button variant="outline" size="sm" onClick={handleExportPDF} disabled={exporting}>
+          <Button variant="outline" size="sm" onClick={handleExportPDF}>
             <FileText className="w-4 h-4 mr-2" />
             Análise PDF
           </Button>
@@ -301,6 +294,12 @@ ${noticia.fonte.map((f) => `${f.nome}: ${f.url}`).join("\n")}
           </Button>
         </div>
       </DialogContent>
+      
+      <ExportModal
+        isOpen={showExportModal}
+        onClose={() => setShowExportModal(false)}
+        noticia={noticia}
+      />
     </Dialog>
   );
 }
