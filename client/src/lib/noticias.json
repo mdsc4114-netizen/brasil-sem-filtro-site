@@ -124,6 +124,381 @@
       "hashtags": ["#ViktorOrban", "#Hungria", "#DireitaBrasil", "#PoliticaInternacional", "#Conservadorismo", "#BrasilSemFiltro"],
       "categoria": "Política Internacional",
       "impacto": "Alto"
+    },
+    {
+      "id": 6,
+      "titulo": "Supremo Tribunal Federal julga ação sobre reforma tributária",
+      "subtitulo": "Decisão pode impactar arrecadação e economia",
+      "resumo": "O STF iniciou julgamento de ação que questiona aspectos da reforma tributária aprovada pelo Congresso. A decisão pode ter implicações significativas para a arrecadação de impostos e a dinâmica econômica do país nos próximos anos.",
+      "fonte": [
+        {
+          "nome": "G1",
+          "url": "https://g1.globo.com/politica/noticia/2026/04/13/stf-julga-acao-sobre-reforma-tributaria.ghtml"
+        },
+        {
+          "nome": "Folha de S.Paulo",
+          "url": "https://www1.folha.uol.com.br/mercado/2026/04/13/stf-reforma-tributaria.shtml"
+        }
+      ],
+      "potencialViral": "Médio",
+      "justificativa": "Notícias sobre reforma tributária geram interesse entre profissionais de economia, empresários e cidadãos preocupados com impostos, mas com alcance mais segmentado.",
+      "publicoAlvo": "Empresários, contadores, economistas, profissionais de finanças, cidadãos interessados em política fiscal",
+      "anguloEditorial": "Explicar os pontos em questão da reforma tributária, os argumentos de ambos os lados e as possíveis consequências da decisão",
+      "tituloRedes": "STF decide sobre reforma tributária: Entenda o que pode mudar!",
+      "legenda": "⚖️ O STF está julgando aspectos cruciais da reforma tributária! Essa decisão pode afetar impostos, arrecadação e a economia de milhões de brasileiros.",
+      "hashtags": ["#ReformaTributaria", "#STF", "#Economia", "#Impostos", "#PoliticaFiscal", "#BrasilSemFiltro"],
+      "categoria": "Política",
+      "impacto": "Alto"
+    },
+    {
+      "id": 7,
+      "titulo": "Banco Central anuncia nova rodada de aperto monetário",
+      "subtitulo": "Taxa Selic pode chegar a 14% ao ano",
+      "resumo": "O Banco Central anunciou que manterá sua política de aperto monetário, com perspectiva de elevar a taxa Selic para 14% ao ano. A medida visa controlar a inflação, mas pode impactar negativamente o crescimento econômico e aumentar o custo do crédito.",
+      "fonte": [
+        {
+          "nome": "UOL Economia",
+          "url": "https://economia.uol.com.br/noticias/banco-central-selic-2026-04-13.ghtml"
+        },
+        {
+          "nome": "Valor Econômico",
+          "url": "https://www.valor.com.br/financas/banco-central-selic-2026"
+        }
+      ],
+      "potencialViral": "Alto",
+      "justificativa": "Mudanças na taxa Selic afetam diretamente o bolso do brasileiro através de juros de empréstimos, financiamentos e investimentos. O tema gera grande interesse e preocupação.",
+      "publicoAlvo": "Pessoas com dívidas, investidores, poupadores, empreendedores, profissionais de finanças pessoais",
+      "anguloEditorial": "Explicar o que é taxa Selic, como ela funciona e quais são as implicações para diferentes segmentos da população",
+      "tituloRedes": "Selic pode chegar a 14%: Como isso afeta seu bolso?",
+      "legenda": "📉 O Banco Central pode elevar a Selic para 14%! Isso significa juros mais altos em empréstimos, financiamentos e impacto na economia. Entenda como isso afeta você!",
+      "hashtags": ["#Selic", "#BancoCentral", "#Economia", "#Inflacao", "#Juros", "#FinancasPessoais", "#BrasilSemFiltro"],
+      "categoria": "Economia",
+      "impacto": "Muito Alto"
+    },
+    {
+      "id": 8,
+      "titulo": "Tecnologia 5G chega em mais 50 cidades brasileiras",
+      "subtitulo": "Expansão da rede de internet móvel de alta velocidade",
+      "resumo": "As operadoras de telefonia móvel anunciaram a expansão da cobertura 5G para mais 50 cidades brasileiras. A tecnologia promete velocidades de internet muito superiores às redes 4G atuais, revolucionando o acesso à informação e serviços digitais.",
+      "fonte": [
+        {
+          "nome": "Techtudo",
+          "url": "https://www.techtudo.com.br/noticias/2026/04/5g-chega-em-50-cidades-brasileiras.ghtml"
+        },
+        {
+          "nome": "Anatel",
+          "url": "https://www.anatel.gov.br/consumidor/noticias/2026/5g-expansao"
+        }
+      ],
+      "potencialViral": "Médio",
+      "justificativa": "Notícias sobre tecnologia 5G geram interesse entre usuários de smartphones, profissionais de TI e pessoas interessadas em inovação, mas com alcance mais específico.",
+      "publicoAlvo": "Usuários de smartphones, profissionais de TI, gamers, criadores de conteúdo digital, empresas de tecnologia",
+      "anguloEditorial": "Explicar o que é 5G, suas vantagens em relação ao 4G e as possibilidades de aplicação em diferentes setores",
+      "tituloRedes": "5G chega em 50 cidades! Sua cidade está na lista?",
+      "legenda": "📱 A tecnologia 5G está chegando em mais 50 cidades brasileiras! Internet ultra-rápida, streaming sem travamentos e possibilidades infinitas de inovação.",
+      "hashtags": ["#5G", "#Tecnologia", "#Internet", "#Inovacao", "#Smartphones", "#DigitalBrasil", "#BrasilSemFiltro"],
+      "categoria": "Tecnologia",
+      "impacto": "Médio"
+    },
+    {
+      "id": 9,
+      "titulo": "Mudanças climáticas: Brasil registra temperatura recorde em 2026",
+      "subtitulo": "Fenômeno El Niño intensifica ondas de calor",
+      "resumo": "O Brasil registrou a temperatura média mais alta desde o início dos registros em 2026. O fenômeno El Niño, combinado com mudanças climáticas globais, intensificou ondas de calor em várias regiões do país, afetando agricultura, saúde pública e consumo de energia.",
+      "fonte": [
+        {
+          "nome": "INPE",
+          "url": "https://www.inpe.gov.br/noticias/temperatura-recorde-brasil-2026"
+        },
+        {
+          "nome": "G1 Natureza",
+          "url": "https://g1.globo.com/natureza/noticia/2026/04/13/temperatura-recorde-brasil.ghtml"
+        }
+      ],
+      "potencialViral": "Alto",
+      "justificativa": "Notícias sobre mudanças climáticas e seus impactos diretos (calor extremo, seca) geram grande preocupação e engajamento, especialmente em contextos de crise ambiental.",
+      "publicoAlvo": "Ambientalistas, agricultores, profissionais de saúde, cidadãos preocupados com clima, estudantes de ciências ambientais",
+      "anguloEditorial": "Apresentar dados científicos sobre a temperatura recorde, explicar o fenômeno El Niño e discutir as implicações para agricultura, saúde e energia",
+      "tituloRedes": "Recorde de calor no Brasil: O que esperar para os próximos meses?",
+      "legenda": "🌡️ Brasil registra temperatura RECORDE em 2026! El Niño intensifica ondas de calor que afetam agricultura, saúde e energia. Especialistas alertam para necessidade de ação climática urgente.",
+      "hashtags": ["#MudancasClimaticas", "#ElNino", "#Clima", "#AquecimentoGlobal", "#Ambiente", "#CriseCLimatica", "#BrasilSemFiltro"],
+      "categoria": "Ambiente",
+      "impacto": "Muito Alto"
+    },
+    {
+      "id": 10,
+      "titulo": "Congresso Nacional aprova lei de proteção de dados pessoais",
+      "subtitulo": "Nova regulamentação sobre privacidade digital",
+      "resumo": "O Congresso Nacional aprovou uma nova lei que reforça a proteção de dados pessoais dos brasileiros. A legislação estabelece regras mais rigorosas para empresas que coletam e utilizam dados, alinhando o Brasil com padrões internacionais de privacidade digital.",
+      "fonte": [
+        {
+          "nome": "Câmara dos Deputados",
+          "url": "https://www2.camara.leg.br/noticias/2026/04/13/lei-protecao-dados"
+        },
+        {
+          "nome": "Senado Federal",
+          "url": "https://www12.senado.leg.br/noticias/2026/04/13/lei-dados-pessoais"
+        }
+      ],
+      "potencialViral": "Médio",
+      "justificativa": "Notícias sobre privacidade digital e proteção de dados geram interesse entre usuários conscientes de privacidade, profissionais de TI e empresas, mas com alcance mais segmentado.",
+      "publicoAlvo": "Usuários de internet preocupados com privacidade, profissionais de TI, empresas de tecnologia, advogados, ativistas de direitos digitais",
+      "anguloEditorial": "Explicar os principais pontos da lei, como ela protege os dados dos cidadãos e quais são as obrigações das empresas",
+      "tituloRedes": "Lei de proteção de dados: Seus dados agora estão mais seguros!",
+      "legenda": "🔒 Congresso aprova lei que reforça proteção de dados pessoais! Empresas terão regras mais rigorosas e você terá mais controle sobre suas informações digitais.",
+      "hashtags": ["#ProtecaoDados", "#Privacidade", "#Digital", "#Lei", "#Tecnologia", "#DireitosDigitais", "#BrasilSemFiltro"],
+      "categoria": "Tecnologia",
+      "impacto": "Médio"
+    },
+    {
+      "id": 11,
+      "titulo": "Seleção Brasileira de Futebol vence amistoso importante",
+      "subtitulo": "Preparação para Copa do Mundo 2026",
+      "resumo": "A Seleção Brasileira de Futebol conquistou uma vitória importante em amistoso preparatório para a Copa do Mundo de 2026. O resultado reforça a confiança da equipe e da torcida antes dos compromissos oficiais da competição.",
+      "fonte": [
+        {
+          "nome": "Globo Esportes",
+          "url": "https://globoesportes.globo.com/futebol/selecao-brasileira/noticia/2026/04/13/selecao-brasileira-vitoria.ghtml"
+        },
+        {
+          "nome": "ESPN Brasil",
+          "url": "https://www.espn.com.br/futebol/noticia/selecao-brasileira-2026"
+        }
+      ],
+      "potencialViral": "Alto",
+      "justificativa": "Notícias sobre a Seleção Brasileira de Futebol sempre geram grande engajamento e compartilhamento, especialmente em contexto de preparação para Copa do Mundo.",
+      "publicoAlvo": "Torcedores de futebol, fãs da Seleção Brasileira, apostadores esportivos, profissionais de esportes",
+      "anguloEditorial": "Descrever o jogo, os gols, as atuações dos jogadores e analisar o desempenho da equipe em preparação para a Copa",
+      "tituloRedes": "Seleção Brasileira vence! Confiança aumenta para Copa 2026!",
+      "legenda": "⚽ A Seleção Brasileira venceu em amistoso importante! 🇧🇷 A equipe segue firme na preparação para a Copa do Mundo 2026. Que venha a competição!",
+      "hashtags": ["#SelecaoBrasileira", "#Futebol", "#Copa2026", "#BrasilTetra", "#Torcida", "#Futebol", "#BrasilSemFiltro"],
+      "categoria": "Esportes",
+      "impacto": "Alto"
+    },
+    {
+      "id": 12,
+      "titulo": "Novo medicamento para tratamento de câncer é aprovado no Brasil",
+      "subtitulo": "Esperança para pacientes com tumores agressivos",
+      "resumo": "A Agência Nacional de Vigilância Sanitária (ANVISA) aprovou um novo medicamento para o tratamento de câncer que apresenta resultados promissores em testes clínicos. O fármaco oferece esperança para pacientes com tumores agressivos e resistentes aos tratamentos convencionais.",
+      "fonte": [
+        {
+          "nome": "ANVISA",
+          "url": "https://www.anvisa.gov.br/noticias/2026/04/13/medicamento-cancer"
+        },
+        {
+          "nome": "Folha de S.Paulo",
+          "url": "https://www1.folha.uol.com.br/equilibrio/saude/2026/04/13/novo-medicamento-cancer.shtml"
+        }
+      ],
+      "potencialViral": "Alto",
+      "justificativa": "Notícias sobre avanços médicos e tratamentos de doenças graves como câncer geram grande engajamento emocional e compartilhamento entre pessoas afetadas e suas redes.",
+      "publicoAlvo": "Pacientes com câncer, familiares de pacientes, profissionais de saúde, pessoas preocupadas com saúde pública",
+      "anguloEditorial": "Explicar o que é o novo medicamento, como funciona, quais são os resultados dos testes clínicos e as perspectivas para pacientes",
+      "tituloRedes": "Nova esperança! Medicamento revolucionário para câncer é aprovado no Brasil!",
+      "legenda": "💊 ANVISA aprova novo medicamento para tratamento de câncer! Esperança para milhares de pacientes com tumores agressivos. Entenda como funciona essa inovação.",
+      "hashtags": ["#Saude", "#Cancer", "#Medicamento", "#ANVISA", "#Inovacao", "#SaudePublica", "#BrasilSemFiltro"],
+      "categoria": "Saúde",
+      "impacto": "Muito Alto"
+    },
+    {
+      "id": 13,
+      "titulo": "Universidades federais anunciam greve por reajuste salarial",
+      "subtitulo": "Professores reivindicam melhoria de condições",
+      "resumo": "Professores das universidades federais anunciaram greve para reivindicar reajuste salarial e melhoria nas condições de trabalho. A paralisação pode impactar o calendário acadêmico e afeta milhares de estudantes em todo o país.",
+      "fonte": [
+        {
+          "nome": "ANDES-SN",
+          "url": "https://www.andes.org.br/noticias/2026/04/13/greve-universidades"
+        },
+        {
+          "nome": "G1 Educação",
+          "url": "https://g1.globo.com/educacao/noticia/2026/04/13/greve-universidades-federais.ghtml"
+        }
+      ],
+      "potencialViral": "Médio/Alto",
+      "justificativa": "Notícias sobre greves em universidades federais geram interesse entre estudantes, professores e pessoas preocupadas com educação, especialmente em contexto de crise econômica.",
+      "publicoAlvo": "Estudantes universitários, professores, pais de estudantes, profissionais da educação, pessoas interessadas em política educacional",
+      "anguloEditorial": "Explicar as reivindicações dos professores, o contexto econômico e as possíveis consequências para o calendário acadêmico",
+      "tituloRedes": "Greve nas universidades federais: O que muda para os estudantes?",
+      "legenda": "📚 Professores das universidades federais anunciam greve por reajuste salarial! Estudantes podem ser afetados. Entenda o contexto dessa mobilização.",
+      "hashtags": ["#Educacao", "#Universidade", "#Greve", "#Professores", "#PoliticaEducacional", "#Brasil", "#BrasilSemFiltro"],
+      "categoria": "Educação",
+      "impacto": "Alto"
+    },
+    {
+      "id": 14,
+      "titulo": "Mercado imobiliário registra queda de 15% nas vendas",
+      "subtitulo": "Crise econômica afeta setor de construção civil",
+      "resumo": "O mercado imobiliário brasileiro registrou queda de 15% nas vendas de imóveis em comparação com o período anterior. A crise econômica, aliada aos altos juros, desestimula o investimento em propriedades e afeta construtoras e imobiliárias.",
+      "fonte": [
+        {
+          "nome": "CBIC",
+          "url": "https://www.cbic.org.br/noticias/2026/04/13/mercado-imobiliario-queda"
+        },
+        {
+          "nome": "Valor Econômico",
+          "url": "https://www.valor.com.br/imoveis/mercado-imobiliario-2026"
+        }
+      ],
+      "potencialViral": "Médio",
+      "justificativa": "Notícias sobre o mercado imobiliário geram interesse entre pessoas que desejam comprar imóvel, investidores e profissionais do setor, mas com alcance mais segmentado.",
+      "publicoAlvo": "Pessoas interessadas em comprar imóvel, investidores imobiliários, profissionais do setor de construção, economistas",
+      "anguloEditorial": "Analisar as causas da queda, o impacto na economia e as perspectivas para o setor nos próximos meses",
+      "tituloRedes": "Mercado imobiliário cai 15%: É hora de comprar ou esperar?",
+      "legenda": "🏠 Mercado imobiliário registra queda de 15% nas vendas! Juros altos e crise econômica afetam o setor. Entenda o que esperar para os próximos meses.",
+      "hashtags": ["#MercadoImobiliario", "#Imoveis", "#Economia", "#Construcao", "#Investimento", "#Brasil", "#BrasilSemFiltro"],
+      "categoria": "Economia",
+      "impacto": "Médio"
+    },
+    {
+      "id": 15,
+      "titulo": "Influenciador digital é investigado por fraude em criptomoedas",
+      "subtitulo": "Esquema enganava seguidores com promessas de lucro",
+      "resumo": "Um influenciador digital com milhões de seguidores está sendo investigado pela polícia por supostamente enganar seus fãs em um esquema de fraude envolvendo criptomoedas. O influenciador prometia lucros garantidos e altos retornos, atraindo investimentos de pessoas desavisadas.",
+      "fonte": [
+        {
+          "nome": "Polícia Federal",
+          "url": "https://www.pf.gov.br/noticias/2026/04/13/investigacao-influenciador"
+        },
+        {
+          "nome": "G1",
+          "url": "https://g1.globo.com/economia/noticia/2026/04/13/influenciador-fraude-cripto.ghtml"
+        }
+      ],
+      "potencialViral": "Alto",
+      "justificativa": "Notícias sobre fraudes envolvendo influenciadores digitais e criptomoedas geram grande engajamento, especialmente entre usuários de redes sociais e investidores.",
+      "publicoAlvo": "Usuários de redes sociais, investidores em criptomoedas, pessoas preocupadas com fraudes digitais, seguidores do influenciador",
+      "anguloEditorial": "Descrever o esquema de fraude, como funcionava e quais foram as vítimas. Alertar sobre riscos de investimentos em criptomoedas",
+      "tituloRedes": "Influenciador é investigado por fraude em cripto: Cuidado com promessas de lucro fácil!",
+      "legenda": "⚠️ Influenciador com milhões de seguidores é investigado por fraude em criptomoedas! Ele prometia lucros garantidos. Cuidado: lucro fácil não existe!",
+      "hashtags": ["#Fraude", "#Cripto", "#Influenciador", "#Ciberseguranca", "#AlertaFraude", "#RedesSociais", "#BrasilSemFiltro"],
+      "categoria": "Segurança",
+      "impacto": "Alto"
+    },
+    {
+      "id": 16,
+      "titulo": "Novo recorde de desemprego atinge 8,2% da população",
+      "subtitulo": "Crise econômica intensifica busca por empregos",
+      "resumo": "O Brasil registrou novo recorde de desemprego, chegando a 8,2% da população economicamente ativa. A crise econômica, combinada com a inflação e altos juros, intensifica a busca por empregos e precariza as condições de trabalho.",
+      "fonte": [
+        {
+          "nome": "IBGE",
+          "url": "https://www.ibge.gov.br/noticias/2026/04/13/desemprego-recorde"
+        },
+        {
+          "nome": "UOL Economia",
+          "url": "https://economia.uol.com.br/noticias/2026/04/13/desemprego-brasil.ghtml"
+        }
+      ],
+      "potencialViral": "Alto",
+      "justificativa": "Notícias sobre desemprego geram grande preocupação e engajamento, especialmente em contexto de crise econômica que afeta diretamente a vida das pessoas.",
+      "publicoAlvo": "Desempregados, pessoas em busca de emprego, trabalhadores precários, economistas, pessoas preocupadas com economia",
+      "anguloEditorial": "Apresentar os dados de desemprego, analisar as causas e discutir as políticas necessárias para combater o problema",
+      "tituloRedes": "Desemprego bate recorde de 8,2%: Como se proteger nessa crise?",
+      "legenda": "📉 Brasil registra novo recorde de desemprego: 8,2%! A crise econômica intensifica a busca por empregos. Saiba como se preparar nesse cenário desafiador.",
+      "hashtags": ["#Desemprego", "#Economia", "#Emprego", "#CriseBrasileira", "#Trabalho", "#SituacaoEconomica", "#BrasilSemFiltro"],
+      "categoria": "Economia",
+      "impacto": "Muito Alto"
+    },
+    {
+      "id": 17,
+      "titulo": "Ator famoso é acusado de assédio sexual por múltiplas vítimas",
+      "subtitulo": "Denúncias abalam indústria do entretenimento",
+      "resumo": "Um ator famoso da indústria do entretenimento brasileiro é acusado de assédio sexual por múltiplas vítimas. As denúncias abalam a indústria e reavivam discussões sobre cultura de abuso e poder desigual em ambientes de trabalho.",
+      "fonte": [
+        {
+          "nome": "G1 Entretenimento",
+          "url": "https://g1.globo.com/entretenimento/noticia/2026/04/13/ator-acusado-assedio.ghtml"
+        },
+        {
+          "nome": "Folha de S.Paulo",
+          "url": "https://www1.folha.uol.com.br/ilustrada/2026/04/13/ator-assedio.shtml"
+        }
+      ],
+      "potencialViral": "Alto",
+      "justificativa": "Notícias sobre acusações de assédio sexual envolvendo celebridades geram grande engajamento, especialmente em contexto de movimentos por justiça e igualdade.",
+      "publicoAlvo": "Fãs de cinema e TV, mulheres preocupadas com assédio, ativistas de direitos humanos, profissionais da indústria do entretenimento",
+      "anguloEditorial": "Descrever as acusações, entrevistar vítimas e especialistas, e discutir a cultura de abuso na indústria do entretenimento",
+      "tituloRedes": "Ator famoso é acusado de assédio sexual: Indústria do entretenimento em xeque!",
+      "legenda": "⚠️ Ator famoso é acusado de assédio sexual por múltiplas vítimas! As denúncias reavivam discussões sobre poder desigual e cultura de abuso na indústria do entretenimento.",
+      "hashtags": ["#Assedio", "#JusticaSocial", "#Entretenimento", "#DireitosHumanos", "#MeToo", "#Celebridade", "#BrasilSemFiltro"],
+      "categoria": "Sociedade",
+      "impacto": "Alto"
+    },
+    {
+      "id": 18,
+      "titulo": "Novo aplicativo revoluciona forma de pagamento entre pessoas",
+      "subtitulo": "Tecnologia blockchain simplifica transferências",
+      "resumo": "Um novo aplicativo de pagamento baseado em tecnologia blockchain foi lançado no Brasil, prometendo revolucionar a forma como as pessoas transferem dinheiro entre si. O app oferece taxas mais baixas e maior segurança em comparação com métodos tradicionais.",
+      "fonte": [
+        {
+          "nome": "TechCrunch Brasil",
+          "url": "https://techcrunch.com.br/2026/04/13/novo-app-pagamento"
+        },
+        {
+          "nome": "Startupi",
+          "url": "https://www.startupi.com.br/2026/04/13/app-blockchain-pagamento"
+        }
+      ],
+      "potencialViral": "Médio",
+      "justificativa": "Notícias sobre inovações em tecnologia de pagamento geram interesse entre usuários de smartphones, profissionais de finanças e pessoas interessadas em tecnologia.",
+      "publicoAlvo": "Usuários de smartphones, profissionais de finanças, investidores em startups, pessoas interessadas em inovação tecnológica",
+      "anguloEditorial": "Explicar como o novo aplicativo funciona, quais são suas vantagens e como ele se compara com soluções existentes",
+      "tituloRedes": "Novo app revoluciona pagamentos: Transferências mais rápidas e seguras!",
+      "legenda": "💳 Novo aplicativo de pagamento com blockchain chega ao Brasil! Taxas mais baixas, segurança aumentada e transferências instantâneas entre pessoas.",
+      "hashtags": ["#Fintech", "#Blockchain", "#Pagamento", "#Inovacao", "#Tecnologia", "#DigitalBrasil", "#BrasilSemFiltro"],
+      "categoria": "Tecnologia",
+      "impacto": "Médio"
+    },
+    {
+      "id": 19,
+      "titulo": "Pesquisa revela que 60% dos brasileiros sofrem com ansiedade",
+      "subtitulo": "Saúde mental em crise no país",
+      "resumo": "Uma pesquisa nacional revelou que 60% dos brasileiros sofrem com ansiedade, um aumento significativo em relação aos anos anteriores. A crise econômica, pandemia e pressões sociais são apontadas como principais causas do problema de saúde mental.",
+      "fonte": [
+        {
+          "nome": "Associação Brasileira de Psiquiatria",
+          "url": "https://www.abp.org.br/noticias/2026/04/13/ansiedade-brasil"
+        },
+        {
+          "nome": "G1 Bem Estar",
+          "url": "https://g1.globo.com/bemestar/noticia/2026/04/13/ansiedade-brasil.ghtml"
+        }
+      ],
+      "potencialViral": "Alto",
+      "justificativa": "Notícias sobre saúde mental e ansiedade geram grande engajamento, especialmente em contexto de crise econômica e social que afeta o bem-estar psicológico.",
+      "publicoAlvo": "Pessoas com ansiedade, profissionais de saúde mental, pessoas preocupadas com bem-estar, estudantes",
+      "anguloEditorial": "Apresentar os dados da pesquisa, discutir as causas da ansiedade e oferecer orientações sobre como lidar com o problema",
+      "tituloRedes": "60% dos brasileiros sofrem com ansiedade: Como lidar com isso?",
+      "legenda": "😰 Pesquisa revela que 60% dos brasileiros sofrem com ansiedade! Crise econômica e pressões sociais intensificam o problema. Saiba como cuidar da sua saúde mental.",
+      "hashtags": ["#SaudeMental", "#Ansiedade", "#BemEstar", "#Psicologia", "#CuidadoComVoce", "#MentallHealth", "#BrasilSemFiltro"],
+      "categoria": "Saúde",
+      "impacto": "Alto"
+    },
+    {
+      "id": 20,
+      "titulo": "Projeto de lei busca regulamentar trabalho de influenciadores digitais",
+      "subtitulo": "Governo quer estabelecer direitos e deveres",
+      "resumo": "Um novo projeto de lei foi apresentado no Congresso Nacional com o objetivo de regulamentar a profissão de influenciador digital. A legislação busca estabelecer direitos trabalhistas, deveres fiscais e proteção contra exploração para os profissionais do setor.",
+      "fonte": [
+        {
+          "nome": "Câmara dos Deputados",
+          "url": "https://www2.camara.leg.br/noticias/2026/04/13/projeto-influenciadores"
+        },
+        {
+          "nome": "G1 Política",
+          "url": "https://g1.globo.com/politica/noticia/2026/04/13/projeto-influenciadores.ghtml"
+        }
+      ],
+      "potencialViral": "Médio",
+      "justificativa": "Notícias sobre regulamentação de influenciadores digitais geram interesse entre criadores de conteúdo, profissionais de marketing digital e pessoas interessadas em política trabalhista.",
+      "publicoAlvo": "Influenciadores digitais, criadores de conteúdo, profissionais de marketing digital, pessoas interessadas em direitos trabalhistas",
+      "anguloEditorial": "Explicar os pontos principais do projeto de lei, como ele afeta os influenciadores e qual é a importância da regulamentação",
+      "tituloRedes": "Novo projeto de lei regulamenta profissão de influenciador digital!",
+      "legenda": "📱 Congresso apresenta projeto de lei para regulamentar influenciadores digitais! Direitos trabalhistas, deveres fiscais e proteção contra exploração em pauta.",
+      "hashtags": ["#Influenciadores", "#RedesSociais", "#Lei", "#DireitosTrabalhistas", "#DigitalBrasil", "#Politica", "#BrasilSemFiltro"],
+      "categoria": "Política",
+      "impacto": "Médio"
     }
   ]
 }

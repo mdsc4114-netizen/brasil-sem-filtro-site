@@ -10,7 +10,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { BarChart3, TrendingUp, Users, Target } from "lucide-react";
+import { BarChart3, TrendingUp, Users, Target, Share2 } from "lucide-react";
+import { toast } from "sonner";
 import { ExportButton } from "@/components/ExportButton";
 import noticiasData from "@/lib/noticias.json";
 
@@ -99,7 +100,7 @@ export default function Home() {
               Relatório de Análise de Notícias com Potencial de Viralização
             </p>
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-              Análise estratégica das 5 principais notícias do dia para
+              Análise estratégica das 20 principais notícias do dia para
               TikTok, Instagram Reels, YouTube Shorts e X. Informação
               imparcial, confiável e otimizada para redes sociais.
             </p>
@@ -109,12 +110,12 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             <div className="bg-card border border-border rounded-lg p-4 text-center">
               <BarChart3 className="w-6 h-6 text-primary mx-auto mb-2" />
-              <p className="text-2xl font-bold text-foreground">5</p>
+              <p className="text-2xl font-bold text-foreground">20</p>
               <p className="text-xs text-muted-foreground">Notícias</p>
             </div>
             <div className="bg-card border border-border rounded-lg p-4 text-center">
               <TrendingUp className="w-6 h-6 text-accent mx-auto mb-2" />
-              <p className="text-2xl font-bold text-foreground">5</p>
+              <p className="text-2xl font-bold text-foreground">10</p>
               <p className="text-xs text-muted-foreground">Potencial Alto</p>
             </div>
             <div className="bg-card border border-border rounded-lg p-4 text-center">
@@ -165,7 +166,26 @@ export default function Home() {
 
             <div className="flex gap-2 w-full md:w-auto">
               <ExportButton noticias={filteredAndSorted} />
-              <Button variant="outline" size="sm">
+              <Button 
+                variant="outline" 
+                size="sm"
+                onClick={() => {
+                  const url = window.location.href;
+                  const text = 'Brasil Sem Filtro - Relatório de Análise de Notícias com Potencial de Viralização';
+                  
+                  if (navigator.share) {
+                    navigator.share({
+                      title: text,
+                      text: text,
+                      url: url,
+                    }).catch((err) => console.log('Erro ao compartilhar:', err));
+                  } else {
+                    navigator.clipboard.writeText(`${text}\n${url}`);
+                    toast.success('Link copiado para a área de transferência!');
+                  }
+                }}
+              >
+                <Share2 className="w-4 h-4 mr-2" />
                 Compartilhar
               </Button>
             </div>
