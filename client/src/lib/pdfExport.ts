@@ -19,491 +19,272 @@ interface Noticia {
 }
 
 /**
- * Exporta uma notícia individual para PDF com formatação profissional e otimizado para WhatsApp
+ * Cria um elemento HTML para renderização de notícia
  */
-export async function exportNoticiaToPDF(noticia: Noticia): Promise<void> {
-  const doc = new jsPDF({
-    orientation: 'portrait',
-    unit: 'mm',
-    format: 'a4',
-    compress: true, // Compressão para reduzir tamanho
-  });
+function criarElementoNoticia(noticia: Noticia): HTMLDivElement {
+  const container = document.createElement('div');
+  container.style.width = '210mm';
+  container.style.minHeight = '297mm';
+  container.style.padding = '15mm';
+  container.style.backgroundColor = '#FFFFFF';
+  container.style.fontFamily = 'Arial, sans-serif';
+  container.style.color = '#2C3E50';
+  container.style.lineHeight = '1.4';
+  container.style.pageBreakAfter = 'always';
 
-  const pageWidth = doc.internal.pageSize.getWidth();
-  const pageHeight = doc.internal.pageSize.getHeight();
-  const margin = 12;
-  const contentWidth = pageWidth - 2 * margin;
-  let yPosition = margin;
+  // Header
+  const header = document.createElement('div');
+  header.style.backgroundColor = '#1A3A52';
+  header.style.color = 'white';
+  header.style.padding = '10mm';
+  header.style.marginBottom = '10mm';
+  header.style.borderRadius = '4px';
+  header.innerHTML = `
+    <div style="font-size: 18px; font-weight: bold;">BRASIL SEM FILTRO</div>
+    <div style="font-size: 10px; margin-top: 3px;">${new Date().toLocaleDateString('pt-BR')}</div>
+  `;
+  container.appendChild(header);
 
-  // Cores do design
-  const primaryColor: [number, number, number] = [26, 58, 82];
-  const accentColor: [number, number, number] = [212, 175, 55];
-  const textColor: [number, number, number] = [44, 62, 80];
+  // Título
+  const titulo = document.createElement('h1');
+  titulo.style.fontSize = '16px';
+  titulo.style.fontWeight = 'bold';
+  titulo.style.marginBottom = '5px';
+  titulo.style.color = '#1A3A52';
+  titulo.textContent = noticia.titulo;
+  container.appendChild(titulo);
 
-  // ===== HEADER =====
-  doc.setFillColor(...primaryColor);
-  doc.rect(0, 0, pageWidth, 22, 'F');
+  // Subtítulo
+  const subtitulo = document.createElement('p');
+  subtitulo.style.fontSize = '12px';
+  subtitulo.style.color = '#D4AF37';
+  subtitulo.style.fontWeight = 'bold';
+  subtitulo.style.marginBottom = '8px';
+  subtitulo.textContent = noticia.subtitulo;
+  container.appendChild(subtitulo);
 
-  doc.setTextColor(255, 255, 255);
-  doc.setFontSize(16);
-  doc.setFont('helvetica', 'bold');
-  doc.text('BRASIL SEM FILTRO', margin, 10);
+  // Separador
+  const separador = document.createElement('hr');
+  separador.style.borderColor = '#D4AF37';
+  separador.style.marginBottom = '8px';
+  container.appendChild(separador);
 
-  doc.setFontSize(8);
-  doc.setFont('helvetica', 'normal');
-  doc.text(`${new Date().toLocaleDateString('pt-BR')}`, margin, 17);
+  // Badges
+  const badges = document.createElement('div');
+  badges.style.marginBottom = '10px';
+  badges.style.fontSize = '9px';
+  badges.innerHTML = `
+    <span style="background-color: #1A3A52; color: white; padding: 3px 8px; border-radius: 3px; margin-right: 5px;">${noticia.categoria}</span>
+    <span style="background-color: #D4AF37; color: #1A3A52; padding: 3px 8px; border-radius: 3px; margin-right: 5px;">Viral: ${noticia.potencialViral}</span>
+    <span style="background-color: #1A3A52; color: white; padding: 3px 8px; border-radius: 3px;">Impacto: ${noticia.impacto}</span>
+  `;
+  container.appendChild(badges);
 
-  yPosition = 28;
+  // Função para adicionar seção
+  const adicionarSecao = (titulo: string, conteudo: string) => {
+    const secao = document.createElement('div');
+    secao.style.marginBottom = '10px';
 
-  // ===== TITULO PRINCIPAL =====
-  doc.setTextColor(...textColor);
-  doc.setFontSize(14);
-  doc.setFont('helvetica', 'bold');
-  const titleLines = doc.splitTextToSize(noticia.titulo, contentWidth);
-  doc.text(titleLines, margin, yPosition);
-  yPosition += titleLines.length * 6 + 3;
+    const tituloSecao = document.createElement('h3');
+    tituloSecao.style.fontSize = '10px';
+    tituloSecao.style.fontWeight = 'bold';
+    tituloSecao.style.color = '#1A3A52';
+    tituloSecao.style.marginBottom = '3px';
+    tituloSecao.textContent = titulo;
+    secao.appendChild(tituloSecao);
 
-  // ===== SUBTITULO =====
-  doc.setFontSize(10);
-  doc.setFont('helvetica', 'bold');
-  doc.setTextColor(...accentColor);
-  doc.text(noticia.subtitulo, margin, yPosition);
-  yPosition += 6;
+    const conteudoSecao = document.createElement('p');
+    conteudoSecao.style.fontSize = '9px';
+    conteudoSecao.style.marginLeft = '5px';
+    conteudoSecao.style.marginBottom = '0';
+    conteudoSecao.textContent = conteudo;
+    secao.appendChild(conteudoSecao);
 
-  // ===== SEPARADOR =====
-  doc.setDrawColor(...accentColor);
-  doc.setLineWidth(0.4);
-  doc.line(margin, yPosition, pageWidth - margin, yPosition);
-  yPosition += 4;
-
-  // ===== BADGES =====
-  doc.setFontSize(7);
-  doc.setFont('helvetica', 'bold');
-  doc.setTextColor(255, 255, 255);
-
-  // Badge categoria
-  doc.setFillColor(...primaryColor);
-  doc.rect(margin, yPosition - 2.5, 22, 5, 'F');
-  doc.text(noticia.categoria, margin + 1, yPosition + 1);
-
-  // Badge potencial viral
-  const viralColors: { [key: string]: [number, number, number] } = {
-    Alto: [220, 53, 69],
-    'Médio/Alto': [255, 193, 7],
-    Médio: [255, 193, 7],
-    Baixo: [108, 117, 125],
+    container.appendChild(secao);
   };
-  doc.setFillColor(...(viralColors[noticia.potencialViral] || [108, 117, 125]));
-  doc.rect(margin + 25, yPosition - 2.5, 32, 5, 'F');
-  doc.text(`Viral: ${noticia.potencialViral}`, margin + 26, yPosition + 1);
 
-  yPosition += 8;
+  // Adicionar seções
+  adicionarSecao('RESUMO', noticia.resumo);
+  adicionarSecao('JUSTIFICATIVA', noticia.justificativa);
+  adicionarSecao('PUBLICO-ALVO', noticia.publicoAlvo);
+  adicionarSecao('ANGULO EDITORIAL', noticia.anguloEditorial);
 
-  // ===== RESUMO =====
-  doc.setFontSize(9);
-  doc.setFont('helvetica', 'bold');
-  doc.setTextColor(...primaryColor);
-  doc.text('RESUMO', margin, yPosition);
-  yPosition += 4;
+  // Conteúdo para redes sociais
+  const redesSecao = document.createElement('div');
+  redesSecao.style.marginBottom = '10px';
+  redesSecao.innerHTML = `
+    <h3 style="font-size: 10px; font-weight: bold; color: #1A3A52; margin-bottom: 3px;">CONTEUDO PARA REDES SOCIAIS</h3>
+    <div style="font-size: 9px; margin-left: 5px;">
+      <div style="margin-bottom: 5px;">
+        <strong>Titulo:</strong><br/>
+        ${noticia.tituloRedes}
+      </div>
+      <div style="margin-bottom: 5px;">
+        <strong>Legenda:</strong><br/>
+        ${noticia.legenda}
+      </div>
+      <div>
+        <strong>Hashtags:</strong><br/>
+        <span style="color: #D4AF37;">${noticia.hashtags.join(' ')}</span>
+      </div>
+    </div>
+  `;
+  container.appendChild(redesSecao);
 
-  doc.setFontSize(8);
-  doc.setFont('helvetica', 'normal');
-  doc.setTextColor(...textColor);
-  const resumoLines = doc.splitTextToSize(noticia.resumo, contentWidth - 3);
-  doc.text(resumoLines, margin + 3, yPosition);
-  yPosition += resumoLines.length * 3.5 + 3;
+  // Fontes
+  const fontesSecao = document.createElement('div');
+  fontesSecao.style.marginTop = '15px';
+  fontesSecao.innerHTML = `
+    <h3 style="font-size: 10px; font-weight: bold; color: #1A3A52; margin-bottom: 3px;">FONTES CONFIAVEIS</h3>
+    <div style="font-size: 8px; margin-left: 5px;">
+      ${noticia.fonte
+        .map(
+          (f) => `
+        <div style="margin-bottom: 3px;">
+          <strong>${f.nome}</strong><br/>
+          <span style="color: #666;">${f.url}</span>
+        </div>
+      `
+        )
+        .join('')}
+    </div>
+  `;
+  container.appendChild(fontesSecao);
 
-  // Verificar se precisa de nova página
-  if (yPosition > pageHeight - 40) {
-    doc.addPage();
-    yPosition = margin;
-  }
+  // Footer
+  const footer = document.createElement('div');
+  footer.style.fontSize = '8px';
+  footer.style.color = '#999';
+  footer.style.marginTop = '20px';
+  footer.style.textAlign = 'center';
+  footer.textContent = `Brasil Sem Filtro - Analise de Noticias`;
+  container.appendChild(footer);
 
-  // ===== JUSTIFICATIVA =====
-  doc.setFontSize(9);
-  doc.setFont('helvetica', 'bold');
-  doc.setTextColor(...primaryColor);
-  doc.text('JUSTIFICATIVA', margin, yPosition);
-  yPosition += 4;
-
-  doc.setFontSize(8);
-  doc.setFont('helvetica', 'normal');
-  doc.setTextColor(...textColor);
-  const justLines = doc.splitTextToSize(noticia.justificativa, contentWidth - 3);
-  doc.text(justLines, margin + 3, yPosition);
-  yPosition += justLines.length * 3.5 + 3;
-
-  // ===== PUBLICO-ALVO =====
-  doc.setFontSize(9);
-  doc.setFont('helvetica', 'bold');
-  doc.setTextColor(...primaryColor);
-  doc.text('PUBLICO-ALVO', margin, yPosition);
-  yPosition += 4;
-
-  doc.setFontSize(8);
-  doc.setFont('helvetica', 'normal');
-  doc.setTextColor(...textColor);
-  const publicoLines = doc.splitTextToSize(noticia.publicoAlvo, contentWidth - 3);
-  doc.text(publicoLines, margin + 3, yPosition);
-  yPosition += publicoLines.length * 3.5 + 3;
-
-  // Verificar se precisa de nova página
-  if (yPosition > pageHeight - 40) {
-    doc.addPage();
-    yPosition = margin;
-  }
-
-  // ===== ANGULO EDITORIAL =====
-  doc.setFontSize(9);
-  doc.setFont('helvetica', 'bold');
-  doc.setTextColor(...primaryColor);
-  doc.text('ANGULO EDITORIAL', margin, yPosition);
-  yPosition += 4;
-
-  doc.setFontSize(8);
-  doc.setFont('helvetica', 'normal');
-  doc.setTextColor(...textColor);
-  const anguloLines = doc.splitTextToSize(noticia.anguloEditorial, contentWidth - 3);
-  doc.text(anguloLines, margin + 3, yPosition);
-  yPosition += anguloLines.length * 3.5 + 3;
-
-  // ===== CONTEÚDO PARA REDES SOCIAIS =====
-  doc.setFontSize(9);
-  doc.setFont('helvetica', 'bold');
-  doc.setTextColor(...primaryColor);
-  doc.text('CONTEUDO PARA REDES SOCIAIS', margin, yPosition);
-  yPosition += 4;
-
-  // Título para redes
-  doc.setFontSize(8);
-  doc.setFont('helvetica', 'bold');
-  doc.setTextColor(...textColor);
-  doc.text('Titulo:', margin, yPosition);
-  yPosition += 3;
-
-  doc.setFontSize(7);
-  doc.setFont('helvetica', 'normal');
-  const titleRedesLines = doc.splitTextToSize(noticia.tituloRedes, contentWidth - 3);
-  doc.text(titleRedesLines, margin + 3, yPosition);
-  yPosition += titleRedesLines.length * 3 + 2;
-
-  // Verificar se precisa de nova página
-  if (yPosition > pageHeight - 40) {
-    doc.addPage();
-    yPosition = margin;
-  }
-
-  // ===== LEGENDA =====
-  doc.setFontSize(8);
-  doc.setFont('helvetica', 'bold');
-  doc.setTextColor(...primaryColor);
-  doc.text('Legenda:', margin, yPosition);
-  yPosition += 3;
-
-  doc.setFontSize(7);
-  doc.setFont('helvetica', 'normal');
-  doc.setTextColor(...textColor);
-  const legendLines = doc.splitTextToSize(noticia.legenda, contentWidth - 3);
-  doc.text(legendLines, margin + 3, yPosition);
-  yPosition += legendLines.length * 3 + 2;
-
-  // ===== HASHTAGS =====
-  doc.setFontSize(8);
-  doc.setFont('helvetica', 'bold');
-  doc.setTextColor(...primaryColor);
-  doc.text('Hashtags:', margin, yPosition);
-  yPosition += 3;
-
-  doc.setFontSize(7);
-  doc.setFont('helvetica', 'normal');
-  doc.setTextColor(...accentColor);
-  const hashtagText = noticia.hashtags.join(' ');
-  const hashtagLines = doc.splitTextToSize(hashtagText, contentWidth - 3);
-  doc.text(hashtagLines, margin + 3, yPosition);
-  yPosition += hashtagLines.length * 3 + 3;
-
-  // Verificar se precisa de nova página
-  if (yPosition > pageHeight - 35) {
-    doc.addPage();
-    yPosition = margin;
-  }
-
-  // ===== FONTES CONFIÁVEIS =====
-  doc.setFontSize(9);
-  doc.setFont('helvetica', 'bold');
-  doc.setTextColor(...primaryColor);
-  doc.text('FONTES CONFIAVEIS', margin, yPosition);
-  yPosition += 4;
-
-  doc.setFontSize(7);
-  doc.setFont('helvetica', 'normal');
-  doc.setTextColor(...textColor);
-  noticia.fonte.forEach((fonte) => {
-    doc.setFont('helvetica', 'bold');
-    doc.text(`- ${fonte.nome}`, margin + 3, yPosition);
-    yPosition += 2.5;
-    
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(100, 100, 100);
-    const urlLines = doc.splitTextToSize(fonte.url, contentWidth - 6);
-    doc.text(urlLines, margin + 6, yPosition);
-    yPosition += urlLines.length * 2 + 1;
-    
-    doc.setTextColor(...textColor);
-  });
-
-  // ===== FOOTER =====
-  const totalPages = doc.internal.pages.length - 1;
-  for (let i = 1; i <= totalPages; i++) {
-    doc.setPage(i);
-    doc.setFontSize(7);
-    doc.setTextColor(150, 150, 150);
-    doc.text(
-      `Pagina ${i} de ${totalPages}`,
-      pageWidth / 2,
-      pageHeight - 8,
-      { align: 'center' }
-    );
-  }
-
-  // Download com nome otimizado
-  const fileName = `noticia-${noticia.id}.pdf`;
-  doc.save(fileName);
+  return container;
 }
 
 /**
- * Exporta todas as notícias em um relatório completo otimizado para WhatsApp
+ * Exporta uma notícia individual para PDF com renderização HTML2Canvas
+ */
+export async function exportNoticiaToPDF(noticia: Noticia): Promise<void> {
+  try {
+    // Criar elemento HTML
+    const elemento = criarElementoNoticia(noticia);
+    document.body.appendChild(elemento);
+
+    // Renderizar para canvas
+    const canvas = await html2canvas(elemento, {
+      scale: 2,
+      useCORS: true,
+      logging: false,
+      backgroundColor: '#FFFFFF',
+    });
+
+    // Remover elemento
+    document.body.removeChild(elemento);
+
+    // Criar PDF
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new jsPDF({
+      orientation: 'portrait',
+      unit: 'mm',
+      format: 'a4',
+    });
+
+    const imgWidth = 210;
+    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    let heightLeft = imgHeight;
+    let position = 0;
+
+    pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+    heightLeft -= 297;
+
+    while (heightLeft >= 0) {
+      position = heightLeft - imgHeight;
+      pdf.addPage();
+      pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+      heightLeft -= 297;
+    }
+
+    // Download
+    pdf.save('noticia.pdf');
+  } catch (error) {
+    console.error('Erro ao gerar PDF:', error);
+    alert('Erro ao gerar PDF. Por favor, tente novamente.');
+  }
+}
+
+/**
+ * Exporta todas as notícias em um relatório completo
  */
 export async function exportRelatorioCompletoPDF(noticias: Noticia[]): Promise<void> {
-  const doc = new jsPDF({
-    orientation: 'portrait',
-    unit: 'mm',
-    format: 'a4',
-    compress: true, // Compressão para reduzir tamanho
-  });
-
-  const pageWidth = doc.internal.pageSize.getWidth();
-  const pageHeight = doc.internal.pageSize.getHeight();
-  const margin = 12;
-  const contentWidth = pageWidth - 2 * margin;
-
-  const primaryColor: [number, number, number] = [26, 58, 82];
-  const accentColor: [number, number, number] = [212, 175, 55];
-  const textColor: [number, number, number] = [44, 62, 80];
-
-  // ===== PÁGINA DE CAPA =====
-  doc.setFillColor(...primaryColor);
-  doc.rect(0, 0, pageWidth, pageHeight, 'F');
-
-  doc.setTextColor(255, 255, 255);
-  doc.setFontSize(44);
-  doc.setFont('helvetica', 'bold');
-  doc.text('BRASIL SEM FILTRO', pageWidth / 2, 75, { align: 'center' });
-
-  doc.setFontSize(22);
-  doc.setFont('helvetica', 'normal');
-  doc.text('Relatorio de Noticias', pageWidth / 2, 105, { align: 'center' });
-
-  doc.setFontSize(13);
-  doc.setTextColor(...accentColor);
-  doc.text('Com Potencial de Viralizacao', pageWidth / 2, 122, { align: 'center' });
-
-  doc.setFontSize(10);
-  doc.setTextColor(200, 200, 200);
-  doc.text(`${new Date().toLocaleDateString('pt-BR')}`, pageWidth / 2, 155, { align: 'center' });
-  doc.text(`${noticias.length} Noticias`, pageWidth / 2, 165, { align: 'center' });
-
-  // ===== PÁGINA PARA CADA NOTÍCIA =====
-  noticias.forEach((noticia, index) => {
-    doc.addPage();
-    let yPosition = margin;
-
-    // Número da notícia
-    doc.setFillColor(...primaryColor);
-    doc.circle(margin + 4, yPosition + 4, 4, 'F');
-    doc.setTextColor(255, 255, 255);
-    doc.setFontSize(11);
-    doc.setFont('helvetica', 'bold');
-    doc.text(String(index + 1), margin + 4, yPosition + 5, { align: 'center' });
-
-    // Título
-    doc.setTextColor(...textColor);
-    doc.setFontSize(13);
-    doc.setFont('helvetica', 'bold');
-    const titleLines = doc.splitTextToSize(noticia.titulo, contentWidth - 12);
-    doc.text(titleLines, margin + 12, yPosition);
-    yPosition += titleLines.length * 5.5 + 3;
-
-    // Categoria e potencial viral
-    doc.setFontSize(8);
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(...accentColor);
-    doc.text(`${noticia.categoria} | Viral: ${noticia.potencialViral}`, margin, yPosition);
-    yPosition += 4;
-
-    // Separador
-    doc.setDrawColor(...accentColor);
-    doc.setLineWidth(0.3);
-    doc.line(margin, yPosition, pageWidth - margin, yPosition);
-    yPosition += 3;
-
-    // ===== RESUMO =====
-    doc.setFontSize(8);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(...primaryColor);
-    doc.text('RESUMO', margin, yPosition);
-    yPosition += 3;
-
-    doc.setFontSize(7);
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(...textColor);
-    const resumoLines = doc.splitTextToSize(noticia.resumo, contentWidth - 3);
-    doc.text(resumoLines, margin + 3, yPosition);
-    yPosition += resumoLines.length * 2.8 + 2;
-
-    // ===== JUSTIFICATIVA =====
-    doc.setFontSize(8);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(...primaryColor);
-    doc.text('JUSTIFICATIVA', margin, yPosition);
-    yPosition += 3;
-
-    doc.setFontSize(7);
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(...textColor);
-    const justLines = doc.splitTextToSize(noticia.justificativa, contentWidth - 3);
-    doc.text(justLines, margin + 3, yPosition);
-    yPosition += justLines.length * 2.8 + 2;
-
-    // Verificar se precisa de nova página
-    if (yPosition > pageHeight - 45) {
-      doc.addPage();
-      yPosition = margin;
-    }
-
-    // ===== PUBLICO-ALVO =====
-    doc.setFontSize(8);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(...primaryColor);
-    doc.text('PUBLICO-ALVO', margin, yPosition);
-    yPosition += 3;
-
-    doc.setFontSize(7);
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(...textColor);
-    const publicoLines = doc.splitTextToSize(noticia.publicoAlvo, contentWidth - 3);
-    doc.text(publicoLines, margin + 3, yPosition);
-    yPosition += publicoLines.length * 2.8 + 2;
-
-    // ===== ANGULO EDITORIAL =====
-    doc.setFontSize(8);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(...primaryColor);
-    doc.text('ANGULO EDITORIAL', margin, yPosition);
-    yPosition += 3;
-
-    doc.setFontSize(7);
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(...textColor);
-    const anguloLines = doc.splitTextToSize(noticia.anguloEditorial, contentWidth - 3);
-    doc.text(anguloLines, margin + 3, yPosition);
-    yPosition += anguloLines.length * 2.8 + 2;
-
-    // Verificar se precisa de nova página
-    if (yPosition > pageHeight - 45) {
-      doc.addPage();
-      yPosition = margin;
-    }
-
-    // ===== CONTEÚDO PARA REDES SOCIAIS =====
-    doc.setFontSize(8);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(...primaryColor);
-    doc.text('CONTEUDO PARA REDES', margin, yPosition);
-    yPosition += 3;
-
-    // Título
-    doc.setFontSize(7);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(...textColor);
-    doc.text('Titulo:', margin, yPosition);
-    yPosition += 2.5;
-
-    doc.setFont('helvetica', 'normal');
-    const titleRedesLines = doc.splitTextToSize(noticia.tituloRedes, contentWidth - 3);
-    doc.text(titleRedesLines, margin + 3, yPosition);
-    yPosition += titleRedesLines.length * 2.5 + 1.5;
-
-    // Legenda
-    doc.setFont('helvetica', 'bold');
-    doc.text('Legenda:', margin, yPosition);
-    yPosition += 2.5;
-
-    doc.setFont('helvetica', 'normal');
-    const legendLines = doc.splitTextToSize(noticia.legenda, contentWidth - 3);
-    doc.text(legendLines, margin + 3, yPosition);
-    yPosition += legendLines.length * 2.5 + 1.5;
-
-    // Hashtags
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(...primaryColor);
-    doc.text('Hashtags:', margin, yPosition);
-    yPosition += 2.5;
-
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(...accentColor);
-    const hashtagText = noticia.hashtags.join(' ');
-    const hashtagLines = doc.splitTextToSize(hashtagText, contentWidth - 3);
-    doc.text(hashtagLines, margin + 3, yPosition);
-    yPosition += hashtagLines.length * 2.5 + 2;
-
-    // Verificar se precisa de nova página
-    if (yPosition > pageHeight - 35) {
-      doc.addPage();
-      yPosition = margin;
-    }
-
-    // ===== FONTES CONFIÁVEIS =====
-    doc.setFontSize(7);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(...primaryColor);
-    doc.text('FONTES CONFIAVEIS', margin, yPosition);
-    yPosition += 2.5;
-
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(...textColor);
-    noticia.fonte.forEach((fonte) => {
-      doc.setFont('helvetica', 'bold');
-      doc.text(`- ${fonte.nome}`, margin + 3, yPosition);
-      yPosition += 2;
-      
-      doc.setFont('helvetica', 'normal');
-      doc.setTextColor(100, 100, 100);
-      const urlLines = doc.splitTextToSize(fonte.url, contentWidth - 6);
-      doc.text(urlLines, margin + 6, yPosition);
-      yPosition += urlLines.length * 1.8 + 0.5;
-      
-      doc.setTextColor(...textColor);
+  try {
+    const pdf = new jsPDF({
+      orientation: 'portrait',
+      unit: 'mm',
+      format: 'a4',
     });
-  });
 
-  // ===== FOOTER COM NÚMERO DE PÁGINAS =====
-  const totalPages = doc.internal.pages.length - 1;
-  for (let i = 1; i <= totalPages; i++) {
-    doc.setPage(i);
-    doc.setFontSize(7);
-    doc.setTextColor(150, 150, 150);
-    doc.text(
-      `Pagina ${i} de ${totalPages}`,
-      pageWidth / 2,
-      pageHeight - 8,
-      { align: 'center' }
-    );
+    // Página de capa
+    pdf.setFillColor(26, 58, 82);
+    pdf.rect(0, 0, 210, 297, 'F');
+
+    pdf.setTextColor(255, 255, 255);
+    pdf.setFontSize(44);
+    pdf.setFont('helvetica', 'bold');
+    pdf.text('BRASIL SEM FILTRO', 105, 75, { align: 'center' });
+
+    pdf.setFontSize(22);
+    pdf.setFont('helvetica', 'normal');
+    pdf.text('Relatorio de Noticias', 105, 105, { align: 'center' });
+
+    pdf.setFontSize(13);
+    pdf.setTextColor(212, 175, 55);
+    pdf.text('Com Potencial de Viralizacao', 105, 122, { align: 'center' });
+
+    pdf.setFontSize(10);
+    pdf.setTextColor(200, 200, 200);
+    pdf.text(`${new Date().toLocaleDateString('pt-BR')}`, 105, 155, { align: 'center' });
+    pdf.text(`${noticias.length} Noticias`, 105, 165, { align: 'center' });
+
+    // Adicionar cada notícia como página
+    for (const noticia of noticias) {
+      const elemento = criarElementoNoticia(noticia);
+      document.body.appendChild(elemento);
+
+      const canvas = await html2canvas(elemento, {
+        scale: 2,
+        useCORS: true,
+        logging: false,
+        backgroundColor: '#FFFFFF',
+      });
+
+      document.body.removeChild(elemento);
+
+      const imgData = canvas.toDataURL('image/png');
+      const imgWidth = 210;
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      let heightLeft = imgHeight;
+      let position = 0;
+
+      pdf.addPage();
+      pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+      heightLeft -= 297;
+
+      while (heightLeft >= 0) {
+        position = heightLeft - imgHeight;
+        pdf.addPage();
+        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        heightLeft -= 297;
+      }
+    }
+
+    // Download
+    pdf.save('relatorio.pdf');
+  } catch (error) {
+    console.error('Erro ao gerar PDF:', error);
+    alert('Erro ao gerar PDF. Por favor, tente novamente.');
   }
-
-  // Download com nome simples e otimizado
-  const fileName = `relatorio.pdf`;
-  doc.save(fileName);
 }
 
 /**
