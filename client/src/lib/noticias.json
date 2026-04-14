@@ -2,9 +2,9 @@
   "noticias": [
     {
       "id": 1,
-      "titulo": "EUA iniciam bloqueio no estreito de Ormuz após fracasso de acordo com Irã",
-      "subtitulo": "Petróleo dispara acima de US$ 100",
-      "resumo": "A tensão geopolítica no Oriente Médio escalou com o início do bloqueio americano no Estreito de Ormuz, uma rota marítima crucial para o transporte de petróleo. A medida ocorre após o fracasso das negociações de paz entre Estados Unidos e Irã, resultando na imediata disparada dos preços do petróleo para mais de US$ 100 o barril.",
+      "titulo": "EUA iniciam bloqueio no Estreito de Ormuz: Impacto geopolítico e econômico para o Brasil",
+      "subtitulo": "Tensão no Oriente Médio dispara preços do petróleo e afeta economia brasileira",
+      "resumo": "A tensão geopolítica no Oriente Médio escalou com o início do bloqueio americano no Estreito de Ormuz, uma rota marítima crucial para o transporte de petróleo. A medida ocorre após o fracasso das negociações de paz entre Estados Unidos e Irã, resultando na disparada dos preços do petróleo para mais de US$ 100 o barril, afetando diretamente a inflação e economia brasileira.",
       "fonte": [
         {
           "nome": "Poder360",
@@ -16,20 +16,20 @@
         }
       ],
       "potencialViral": "Alto",
-      "justificativa": "A notícia combina elementos de geopolítica, economia e impacto direto no cotidiano do brasileiro. O aumento do preço do petróleo e, consequentemente, dos combustíveis, afeta diretamente o bolso da população, gerando discussões e preocupações.",
-      "publicoAlvo": "Cidadãos preocupados com a economia doméstica, motoristas, profissionais do transporte, investidores, estudantes de relações internacionais e economia",
-      "anguloEditorial": "Abordar o tema explicando a importância estratégica do Estreito de Ormuz, os motivos do bloqueio e as possíveis consequências econômicas para o Brasil",
-      "tituloRedes": "Crise no Oriente Médio: Petróleo dispara e gasolina pode subir no Brasil!",
-      "legenda": "🚨 ALERTA! A tensão entre EUA e Irã no Estreito de Ormuz fez o preço do petróleo disparar para mais de US$ 100! Entenda como esse conflito distante pode impactar diretamente a inflação e o valor dos combustíveis no Brasil.",
-      "hashtags": ["#CriseDoPetroleo", "#Geopolitica", "#EconomiaBrasil", "#Inflacao", "#Combustivel", "#EstreitoDeOrmuz", "#BrasilSemFiltro"],
-      "categoria": "Economia",
+      "justificativa": "A notícia combina elementos de geopolítica, economia e impacto direto no cotidiano do brasileiro. O aumento do preço do petróleo afeta combustíveis, inflação e economia, gerando discussões intensas sobre política externa e seus reflexos internos.",
+      "publicoAlvo": "Cidadãos preocupados com economia doméstica, analistas políticos, investidores, profissionais de relações internacionais, economistas",
+      "anguloEditorial": "Abordar o tema explicando a importância estratégica do Estreito de Ormuz, os motivos do bloqueio americano, as consequências econômicas para o Brasil e como isso afeta a política externa brasileira",
+      "tituloRedes": "Crise no Oriente Médio: Petróleo dispara e economia brasileira sofre impacto!",
+      "legenda": "🚨 ALERTA GEOPOLÍTICO! A tensão entre EUA e Irã no Estreito de Ormuz fez o preço do petróleo disparar para mais de US$ 100! Entenda como esse conflito distante impacta a inflação, a política externa e a economia brasileira.",
+      "hashtags": ["#Geopolitica", "#EconomiaBrasil", "#Petroleo", "#RelacoeInternacionais", "#PoliticaExterna", "#Inflacao", "#BrasilSemFiltro"],
+      "categoria": "Geopolítica",
       "impacto": "Muito Alto"
     },
     {
       "id": 2,
-      "titulo": "Governo Lula anuncia pacote bilionário de programas sociais",
-      "subtitulo": "Focado em habitação, saúde e primeira infância",
-      "resumo": "O governo federal, liderado pelo Presidente Lula, anunciou um robusto pacote de investimentos de bilhões de reais em programas sociais. As iniciativas visam fortalecer áreas cruciais como habitação popular, saúde da mulher e desenvolvimento na primeira infância.",
+      "titulo": "Governo Lula anuncia pacote bilionário de programas sociais: Impacto fiscal e debate político",
+      "subtitulo": "Investimentos em habitação, saúde e primeira infância geram polarização",
+      "resumo": "O governo federal anunciou um robusto pacote de investimentos de bilhões de reais em programas sociais. As iniciativas visam fortalecer habitação popular, saúde da mulher e desenvolvimento na primeira infância. A medida já gera debate intenso sobre sustentabilidade fiscal e prioridades orçamentárias.",
       "fonte": [
         {
           "nome": "BBC Brasil",
@@ -41,20 +41,20 @@
         }
       ],
       "potencialViral": "Alto",
-      "justificativa": "Notícias sobre programas sociais e investimentos governamentais sempre geram grande engajamento devido ao impacto direto na vida da população. A polarização política em torno dos gastos públicos intensifica o debate.",
-      "publicoAlvo": "Beneficiários de programas sociais, famílias de baixa renda, eleitores de diferentes espectros políticos, estudantes de ciências sociais",
-      "anguloEditorial": "Explicar os detalhes dos programas anunciados, os valores envolvidos e as áreas beneficiadas. Apresentar argumentos a favor e contra de forma equilibrada",
-      "tituloRedes": "Lula libera bilhões para programas sociais: Entenda o impacto!",
-      "legenda": "💰 O governo Lula anunciou um pacote bilionário para habitação, saúde da mulher e primeira infância! Mas a medida já gera debate: será a solução para a economia ou um risco fiscal?",
-      "hashtags": ["#ProgramasSociais", "#GovernoLula", "#Economia", "#PoliticaBrasil", "#Saude", "#Habitacao", "#BrasilSemFiltro"],
+      "justificativa": "Notícias sobre programas sociais e investimentos governamentais geram grande engajamento devido ao impacto direto na vida da população e à polarização política em torno dos gastos públicos.",
+      "publicoAlvo": "Eleitores de diferentes espectros políticos, economistas, analistas políticos, cidadãos interessados em política fiscal",
+      "anguloEditorial": "Explicar os detalhes dos programas, os valores envolvidos, as áreas beneficiadas e apresentar argumentos a favor e contra de forma equilibrada sobre sustentabilidade fiscal",
+      "tituloRedes": "Lula libera bilhões em programas sociais: Sustentabilidade fiscal em debate!",
+      "legenda": "💰 O governo Lula anunciou um pacote bilionário para habitação, saúde e primeira infância! Mas a medida intensifica debate: será a solução para desigualdade ou um risco para a estabilidade fiscal?",
+      "hashtags": ["#ProgramasSociais", "#GovernoLula", "#PoliticaFiscal", "#Economia", "#Debate", "#Brasil", "#BrasilSemFiltro"],
       "categoria": "Política",
       "impacto": "Alto"
     },
     {
       "id": 3,
-      "titulo": "Ministro da Fazenda inicia agenda internacional nos EUA e Europa",
-      "subtitulo": "Em busca de investimentos e estabilidade econômica",
-      "resumo": "O Ministro da Fazenda, Dario Durigan, embarcou em uma importante agenda internacional, com compromissos nos Estados Unidos e na Europa. A viagem tem como principal objetivo atrair investimentos estrangeiros para o Brasil e buscar estabilidade econômica em um cenário global volátil.",
+      "titulo": "Ministro da Fazenda em agenda internacional: Busca por investimentos e credibilidade fiscal",
+      "subtitulo": "Negociações nos EUA e Europa para estabilizar economia brasileira",
+      "resumo": "O Ministro da Fazenda embarcou em importante agenda internacional com compromissos nos Estados Unidos e na Europa. A viagem tem como objetivo atrair investimentos estrangeiros e reforçar credibilidade fiscal do Brasil em cenário global volátil.",
       "fonte": [
         {
           "nome": "Jornal do Comércio",
@@ -66,20 +66,20 @@
         }
       ],
       "potencialViral": "Médio/Alto",
-      "justificativa": "A notícia é relevante para o público interessado em economia e política externa. A busca por investimentos e a tentativa de estabilizar a economia em um cenário de crise global geram interesse.",
-      "publicoAlvo": "Investidores, empresários, economistas, estudantes de economia e relações internacionais",
-      "anguloEditorial": "Explicar os objetivos da viagem, os países visitados e os temas em pauta. Analisar as expectativas e desafios dessa agenda internacional",
-      "tituloRedes": "Missão Bilionária: Ministro da Fazenda busca investimentos para o Brasil!",
-      "legenda": "✈️ O Ministro da Fazenda, Dario Durigan, está em uma turnê crucial pelos EUA e Europa! Em meio à crise global, ele busca investimentos e estabilidade para a economia brasileira.",
-      "hashtags": ["#Economia", "#Investimento", "#Brasil", "#PoliticaExterna", "#MinistroDaFazenda", "#BrasilSemFiltro"],
+      "justificativa": "A notícia é relevante para público interessado em economia e política externa. A busca por investimentos e credibilidade em cenário de crise global gera interesse e debate.",
+      "publicoAlvo": "Investidores, empresários, economistas, analistas políticos, profissionais de relações internacionais",
+      "anguloEditorial": "Explicar os objetivos da viagem, os temas em pauta, as expectativas de investimento e como isso afeta a política econômica brasileira",
+      "tituloRedes": "Diplomacia econômica: Ministro da Fazenda busca investimentos e credibilidade no exterior!",
+      "legenda": "✈️ O Ministro da Fazenda está em turnê crucial pelos EUA e Europa! Em meio à crise global, ele busca investimentos e reforça credibilidade fiscal da economia brasileira.",
+      "hashtags": ["#Economia", "#Investimento", "#PoliticaExterna", "#Diplomacia", "#Brasil", "#Financas", "#BrasilSemFiltro"],
       "categoria": "Economia",
       "impacto": "Médio"
     },
     {
       "id": 4,
       "titulo": "Redes Sociais superam TV como principal fonte de informação política no Brasil",
-      "subtitulo": "Estudo revela mudança histórica no consumo de informação",
-      "resumo": "Uma pesquisa recente da Quaest revelou uma mudança histórica no consumo de informação política no Brasil: pela primeira vez, as redes sociais (39%) superaram a televisão (34%) como principal fonte para os brasileiros. Este dado indica uma profunda transformação no cenário midiático e político do país.",
+      "subtitulo": "Mudança histórica no consumo de informação afeta democracia e debate público",
+      "resumo": "Pesquisa recente revelou que redes sociais (39%) superaram televisão (34%) como principal fonte de informação política no Brasil. Este dado indica transformação profunda no cenário midiático, com implicações para democracia, eleições e combate à desinformação.",
       "fonte": [
         {
           "nome": "Poder360",
@@ -91,20 +91,20 @@
         }
       ],
       "potencialViral": "Alto",
-      "justificativa": "Esta notícia é de alta relevância para o público que consome conteúdo em redes sociais. O fato de as próprias redes sociais serem o tema cria um efeito de metalinguagem que tende a viralizar.",
-      "publicoAlvo": "Usuários ativos de redes sociais, criadores de conteúdo, influenciadores digitais, jornalistas, estudantes de comunicação",
-      "anguloEditorial": "Analisar os dados da pesquisa, apresentando os números e metodologias. Discutir as implicações dessa mudança para a democracia e o debate público",
-      "tituloRedes": "Redes Sociais > TV: Onde você se informa sobre política?",
+      "justificativa": "Esta notícia é de alta relevância para público que consome conteúdo em redes sociais. O fato de as próprias redes sociais serem o tema cria efeito de metalinguagem que tende a viralizar.",
+      "publicoAlvo": "Usuários ativos de redes sociais, criadores de conteúdo, jornalistas, analistas políticos, estudiosos de democracia digital",
+      "anguloEditorial": "Analisar os dados da pesquisa, apresentar metodologia, discutir implicações para democracia, eleições e combate à desinformação",
+      "tituloRedes": "Redes Sociais > TV: Como isso muda a política e a democracia brasileira?",
       "legenda": "📊 DADOS RECENTES! As redes sociais acabam de superar a TV como principal fonte de informação política no Brasil! 🤯 O que essa virada histórica significa para a democracia, as eleições e o combate à desinformação?",
-      "hashtags": ["#RedesSociais", "#InformacaoPolitica", "#Eleicoes2026", "#MidiaDigital", "#FakeNews", "#BrasilSemFiltro"],
-      "categoria": "Mídia",
+      "hashtags": ["#RedesSociais", "#InformacaoPolitica", "#Democracia", "#MidiaDigital", "#FakeNews", "#Eleicoes", "#BrasilSemFiltro"],
+      "categoria": "Política",
       "impacto": "Alto"
     },
     {
       "id": 5,
-      "titulo": "Derrota de Viktor Orbán na Hungria: Repercussões para a direita brasileira",
-      "subtitulo": "Mudança no cenário da direita conservadora global",
-      "resumo": "O primeiro-ministro húngaro, Viktor Orbán, conhecido por suas políticas conservadoras e nacionalistas, sofreu uma derrota significativa nas recentes eleições, marcando um revés para a direita populista na Europa. Este resultado tem gerado discussões sobre suas possíveis repercussões para movimentos da direita conservadora no Brasil.",
+      "titulo": "Derrota de Viktor Orbán na Hungria: Implicações para a direita populista global e brasileira",
+      "subtitulo": "Revés para movimentos conservadores-nacionalistas na Europa",
+      "resumo": "O primeiro-ministro húngaro Viktor Orbán, conhecido por políticas conservadoras e nacionalistas, sofreu derrota significativa nas recentes eleições. Este resultado marca revés para a direita populista na Europa e gera discussões sobre suas repercussões para movimentos similares no Brasil.",
       "fonte": [
         {
           "nome": "Jovem Pan",
@@ -116,20 +116,20 @@
         }
       ],
       "potencialViral": "Alto",
-      "justificativa": "Notícias que envolvem figuras políticas internacionais e suas conexões com a política brasileira têm alto potencial de viralização, especialmente em um cenário de polarização ideológica.",
-      "publicoAlvo": "Eleitores de direita e esquerda, ativistas políticos, estudantes de ciência política, público interessado em ideologias políticas",
-      "anguloEditorial": "Explicar quem é Orbán, suas políticas e o contexto de sua derrota. Analisar as possíveis razões para o resultado eleitoral. Explorar as conexões ideológicas com a direita brasileira",
-      "tituloRedes": "Orbán perde na Hungria: Sinal de alerta para a direita brasileira?",
-      "legenda": "🇭🇺 A derrota de Viktor Orbán na Hungria está agitando o cenário político global! 🌍 Quais as implicações para a direita conservadora no Brasil e para as alianças políticas?",
-      "hashtags": ["#ViktorOrban", "#Hungria", "#DireitaBrasil", "#PoliticaInternacional", "#Conservadorismo", "#BrasilSemFiltro"],
+      "justificativa": "Notícias que envolvem figuras políticas internacionais e suas conexões com política brasileira têm alto potencial de viralização, especialmente em cenário de polarização ideológica.",
+      "publicoAlvo": "Eleitores de direita e esquerda, ativistas políticos, analistas políticos, estudiosos de ideologias políticas",
+      "anguloEditorial": "Explicar quem é Orbán, suas políticas, contexto de sua derrota, razões do resultado eleitoral e conexões ideológicas com direita brasileira",
+      "tituloRedes": "Orbán perde na Hungria: Sinal de alerta para populismo de direita no Brasil?",
+      "legenda": "🇭🇺 A derrota de Viktor Orbán na Hungria está agitando o cenário político global! 🌍 Quais as implicações para movimentos populistas-conservadores no Brasil e para as alianças políticas?",
+      "hashtags": ["#Geopolitica", "#PoliticaInternacional", "#Populismo", "#Conservadorismo", "#Eleicoes", "#Brasil", "#BrasilSemFiltro"],
       "categoria": "Política Internacional",
       "impacto": "Alto"
     },
     {
       "id": 6,
-      "titulo": "Supremo Tribunal Federal julga ação sobre reforma tributária",
-      "subtitulo": "Decisão pode impactar arrecadação e economia",
-      "resumo": "O STF iniciou julgamento de ação que questiona aspectos da reforma tributária aprovada pelo Congresso. A decisão pode ter implicações significativas para a arrecadação de impostos e a dinâmica econômica do país nos próximos anos.",
+      "titulo": "Supremo Tribunal Federal julga ação sobre reforma tributária: Decisão impacta arrecadação",
+      "subtitulo": "STF analisa constitucionalidade de aspectos da reforma aprovada",
+      "resumo": "O STF iniciou julgamento de ação que questiona aspectos da reforma tributária aprovada pelo Congresso. A decisão pode ter implicações significativas para arrecadação de impostos, dinâmica econômica e política fiscal nos próximos anos.",
       "fonte": [
         {
           "nome": "G1",
@@ -141,20 +141,20 @@
         }
       ],
       "potencialViral": "Médio",
-      "justificativa": "Notícias sobre reforma tributária geram interesse entre profissionais de economia, empresários e cidadãos preocupados com impostos, mas com alcance mais segmentado.",
-      "publicoAlvo": "Empresários, contadores, economistas, profissionais de finanças, cidadãos interessados em política fiscal",
-      "anguloEditorial": "Explicar os pontos em questão da reforma tributária, os argumentos de ambos os lados e as possíveis consequências da decisão",
-      "tituloRedes": "STF decide sobre reforma tributária: Entenda o que pode mudar!",
-      "legenda": "⚖️ O STF está julgando aspectos cruciais da reforma tributária! Essa decisão pode afetar impostos, arrecadação e a economia de milhões de brasileiros.",
-      "hashtags": ["#ReformaTributaria", "#STF", "#Economia", "#Impostos", "#PoliticaFiscal", "#BrasilSemFiltro"],
+      "justificativa": "Notícias sobre reforma tributária geram interesse entre profissionais de economia, empresários e cidadãos preocupados com política fiscal, com alcance segmentado mas relevante.",
+      "publicoAlvo": "Empresários, economistas, profissionais de finanças, analistas políticos, cidadãos interessados em política fiscal",
+      "anguloEditorial": "Explicar os pontos em questão da reforma tributária, argumentos de ambos os lados e possíveis consequências da decisão para economia",
+      "tituloRedes": "STF decide sobre reforma tributária: Entenda o que pode mudar na economia!",
+      "legenda": "⚖️ O STF está julgando aspectos cruciais da reforma tributária! Essa decisão pode afetar arrecadação, política fiscal e a economia de milhões de brasileiros.",
+      "hashtags": ["#ReformaTributaria", "#STF", "#PoliticaFiscal", "#Economia", "#Impostos", "#Direito", "#BrasilSemFiltro"],
       "categoria": "Política",
       "impacto": "Alto"
     },
     {
       "id": 7,
-      "titulo": "Banco Central anuncia nova rodada de aperto monetário",
-      "subtitulo": "Taxa Selic pode chegar a 14% ao ano",
-      "resumo": "O Banco Central anunciou que manterá sua política de aperto monetário, com perspectiva de elevar a taxa Selic para 14% ao ano. A medida visa controlar a inflação, mas pode impactar negativamente o crescimento econômico e aumentar o custo do crédito.",
+      "titulo": "Banco Central anuncia novo aperto monetário: Selic pode chegar a 14% ao ano",
+      "subtitulo": "Política de controle inflacionário impacta crescimento econômico",
+      "resumo": "O Banco Central anunciou que manterá política de aperto monetário, com perspectiva de elevar a taxa Selic para 14% ao ano. A medida visa controlar inflação, mas pode impactar negativamente crescimento econômico e aumentar custo do crédito.",
       "fonte": [
         {
           "nome": "UOL Economia",
@@ -167,69 +167,19 @@
       ],
       "potencialViral": "Alto",
       "justificativa": "Mudanças na taxa Selic afetam diretamente o bolso do brasileiro através de juros de empréstimos, financiamentos e investimentos. O tema gera grande interesse e preocupação.",
-      "publicoAlvo": "Pessoas com dívidas, investidores, poupadores, empreendedores, profissionais de finanças pessoais",
-      "anguloEditorial": "Explicar o que é taxa Selic, como ela funciona e quais são as implicações para diferentes segmentos da população",
-      "tituloRedes": "Selic pode chegar a 14%: Como isso afeta seu bolso?",
-      "legenda": "📉 O Banco Central pode elevar a Selic para 14%! Isso significa juros mais altos em empréstimos, financiamentos e impacto na economia. Entenda como isso afeta você!",
-      "hashtags": ["#Selic", "#BancoCentral", "#Economia", "#Inflacao", "#Juros", "#FinancasPessoais", "#BrasilSemFiltro"],
+      "publicoAlvo": "Pessoas com dívidas, investidores, poupadores, empreendedores, profissionais de finanças pessoais, analistas econômicos",
+      "anguloEditorial": "Explicar o que é taxa Selic, como funciona, implicações para diferentes segmentos da população e debate sobre trade-off entre inflação e crescimento",
+      "tituloRedes": "Selic pode chegar a 14%: Como isso afeta a economia e seu bolso?",
+      "legenda": "📉 O Banco Central pode elevar a Selic para 14%! Isso significa juros mais altos em empréstimos, financiamentos e impacto na economia. Entenda as implicações!",
+      "hashtags": ["#Selic", "#BancoCentral", "#PoliticaMonetaria", "#Economia", "#Inflacao", "#Juros", "#BrasilSemFiltro"],
       "categoria": "Economia",
       "impacto": "Muito Alto"
     },
     {
       "id": 8,
-      "titulo": "Tecnologia 5G chega em mais 50 cidades brasileiras",
-      "subtitulo": "Expansão da rede de internet móvel de alta velocidade",
-      "resumo": "As operadoras de telefonia móvel anunciaram a expansão da cobertura 5G para mais 50 cidades brasileiras. A tecnologia promete velocidades de internet muito superiores às redes 4G atuais, revolucionando o acesso à informação e serviços digitais.",
-      "fonte": [
-        {
-          "nome": "Techtudo",
-          "url": "https://www.techtudo.com.br/noticias/2026/04/5g-chega-em-50-cidades-brasileiras.ghtml"
-        },
-        {
-          "nome": "Anatel",
-          "url": "https://www.anatel.gov.br/consumidor/noticias/2026/5g-expansao"
-        }
-      ],
-      "potencialViral": "Médio",
-      "justificativa": "Notícias sobre tecnologia 5G geram interesse entre usuários de smartphones, profissionais de TI e pessoas interessadas em inovação, mas com alcance mais específico.",
-      "publicoAlvo": "Usuários de smartphones, profissionais de TI, gamers, criadores de conteúdo digital, empresas de tecnologia",
-      "anguloEditorial": "Explicar o que é 5G, suas vantagens em relação ao 4G e as possibilidades de aplicação em diferentes setores",
-      "tituloRedes": "5G chega em 50 cidades! Sua cidade está na lista?",
-      "legenda": "📱 A tecnologia 5G está chegando em mais 50 cidades brasileiras! Internet ultra-rápida, streaming sem travamentos e possibilidades infinitas de inovação.",
-      "hashtags": ["#5G", "#Tecnologia", "#Internet", "#Inovacao", "#Smartphones", "#DigitalBrasil", "#BrasilSemFiltro"],
-      "categoria": "Tecnologia",
-      "impacto": "Médio"
-    },
-    {
-      "id": 9,
-      "titulo": "Mudanças climáticas: Brasil registra temperatura recorde em 2026",
-      "subtitulo": "Fenômeno El Niño intensifica ondas de calor",
-      "resumo": "O Brasil registrou a temperatura média mais alta desde o início dos registros em 2026. O fenômeno El Niño, combinado com mudanças climáticas globais, intensificou ondas de calor em várias regiões do país, afetando agricultura, saúde pública e consumo de energia.",
-      "fonte": [
-        {
-          "nome": "INPE",
-          "url": "https://www.inpe.gov.br/noticias/temperatura-recorde-brasil-2026"
-        },
-        {
-          "nome": "G1 Natureza",
-          "url": "https://g1.globo.com/natureza/noticia/2026/04/13/temperatura-recorde-brasil.ghtml"
-        }
-      ],
-      "potencialViral": "Alto",
-      "justificativa": "Notícias sobre mudanças climáticas e seus impactos diretos (calor extremo, seca) geram grande preocupação e engajamento, especialmente em contextos de crise ambiental.",
-      "publicoAlvo": "Ambientalistas, agricultores, profissionais de saúde, cidadãos preocupados com clima, estudantes de ciências ambientais",
-      "anguloEditorial": "Apresentar dados científicos sobre a temperatura recorde, explicar o fenômeno El Niño e discutir as implicações para agricultura, saúde e energia",
-      "tituloRedes": "Recorde de calor no Brasil: O que esperar para os próximos meses?",
-      "legenda": "🌡️ Brasil registra temperatura RECORDE em 2026! El Niño intensifica ondas de calor que afetam agricultura, saúde e energia. Especialistas alertam para necessidade de ação climática urgente.",
-      "hashtags": ["#MudancasClimaticas", "#ElNino", "#Clima", "#AquecimentoGlobal", "#Ambiente", "#CriseCLimatica", "#BrasilSemFiltro"],
-      "categoria": "Ambiente",
-      "impacto": "Muito Alto"
-    },
-    {
-      "id": 10,
-      "titulo": "Congresso Nacional aprova lei de proteção de dados pessoais",
-      "subtitulo": "Nova regulamentação sobre privacidade digital",
-      "resumo": "O Congresso Nacional aprovou uma nova lei que reforça a proteção de dados pessoais dos brasileiros. A legislação estabelece regras mais rigorosas para empresas que coletam e utilizam dados, alinhando o Brasil com padrões internacionais de privacidade digital.",
+      "titulo": "Congresso Nacional aprova lei de proteção de dados pessoais: Impacto em economia digital",
+      "subtitulo": "Nova regulamentação sobre privacidade alinha Brasil com padrões internacionais",
+      "resumo": "O Congresso Nacional aprovou lei que reforça proteção de dados pessoais dos brasileiros. A legislação estabelece regras mais rigorosas para empresas que coletam e utilizam dados, alinhando Brasil com padrões internacionais de privacidade digital.",
       "fonte": [
         {
           "nome": "Câmara dos Deputados",
@@ -241,70 +191,45 @@
         }
       ],
       "potencialViral": "Médio",
-      "justificativa": "Notícias sobre privacidade digital e proteção de dados geram interesse entre usuários conscientes de privacidade, profissionais de TI e empresas, mas com alcance mais segmentado.",
-      "publicoAlvo": "Usuários de internet preocupados com privacidade, profissionais de TI, empresas de tecnologia, advogados, ativistas de direitos digitais",
-      "anguloEditorial": "Explicar os principais pontos da lei, como ela protege os dados dos cidadãos e quais são as obrigações das empresas",
-      "tituloRedes": "Lei de proteção de dados: Seus dados agora estão mais seguros!",
+      "justificativa": "Notícias sobre privacidade digital e proteção de dados geram interesse entre usuários conscientes de privacidade, profissionais de TI, empresas e formuladores de políticas.",
+      "publicoAlvo": "Usuários de internet preocupados com privacidade, profissionais de TI, empresas de tecnologia, advogados, analistas de política digital",
+      "anguloEditorial": "Explicar os principais pontos da lei, como protege dados dos cidadãos, obrigações das empresas e impacto na economia digital",
+      "tituloRedes": "Lei de proteção de dados aprovada: Seus dados agora estão mais seguros!",
       "legenda": "🔒 Congresso aprova lei que reforça proteção de dados pessoais! Empresas terão regras mais rigorosas e você terá mais controle sobre suas informações digitais.",
-      "hashtags": ["#ProtecaoDados", "#Privacidade", "#Digital", "#Lei", "#Tecnologia", "#DireitosDigitais", "#BrasilSemFiltro"],
-      "categoria": "Tecnologia",
+      "hashtags": ["#ProtecaoDados", "#Privacidade", "#EconomiaDigital", "#Lei", "#Tecnologia", "#Direitos", "#BrasilSemFiltro"],
+      "categoria": "Política",
       "impacto": "Médio"
     },
     {
-      "id": 11,
-      "titulo": "Seleção Brasileira de Futebol vence amistoso importante",
-      "subtitulo": "Preparação para Copa do Mundo 2026",
-      "resumo": "A Seleção Brasileira de Futebol conquistou uma vitória importante em amistoso preparatório para a Copa do Mundo de 2026. O resultado reforça a confiança da equipe e da torcida antes dos compromissos oficiais da competição.",
+      "id": 9,
+      "titulo": "Mudanças climáticas e política ambiental: Brasil registra temperatura recorde em 2026",
+      "subtitulo": "Fenômeno El Niño intensifica ondas de calor e afeta política econômica",
+      "resumo": "O Brasil registrou temperatura média mais alta desde início dos registros em 2026. O fenômeno El Niño, combinado com mudanças climáticas, intensificou ondas de calor que afetam agricultura, política energética e economia nacional.",
       "fonte": [
         {
-          "nome": "Globo Esportes",
-          "url": "https://globoesportes.globo.com/futebol/selecao-brasileira/noticia/2026/04/13/selecao-brasileira-vitoria.ghtml"
+          "nome": "INPE",
+          "url": "https://www.inpe.gov.br/noticias/temperatura-recorde-brasil-2026"
         },
         {
-          "nome": "ESPN Brasil",
-          "url": "https://www.espn.com.br/futebol/noticia/selecao-brasileira-2026"
+          "nome": "G1 Natureza",
+          "url": "https://g1.globo.com/natureza/noticia/2026/04/13/temperatura-recorde-brasil.ghtml"
         }
       ],
       "potencialViral": "Alto",
-      "justificativa": "Notícias sobre a Seleção Brasileira de Futebol sempre geram grande engajamento e compartilhamento, especialmente em contexto de preparação para Copa do Mundo.",
-      "publicoAlvo": "Torcedores de futebol, fãs da Seleção Brasileira, apostadores esportivos, profissionais de esportes",
-      "anguloEditorial": "Descrever o jogo, os gols, as atuações dos jogadores e analisar o desempenho da equipe em preparação para a Copa",
-      "tituloRedes": "Seleção Brasileira vence! Confiança aumenta para Copa 2026!",
-      "legenda": "⚽ A Seleção Brasileira venceu em amistoso importante! 🇧🇷 A equipe segue firme na preparação para a Copa do Mundo 2026. Que venha a competição!",
-      "hashtags": ["#SelecaoBrasileira", "#Futebol", "#Copa2026", "#BrasilTetra", "#Torcida", "#Futebol", "#BrasilSemFiltro"],
-      "categoria": "Esportes",
-      "impacto": "Alto"
-    },
-    {
-      "id": 12,
-      "titulo": "Novo medicamento para tratamento de câncer é aprovado no Brasil",
-      "subtitulo": "Esperança para pacientes com tumores agressivos",
-      "resumo": "A Agência Nacional de Vigilância Sanitária (ANVISA) aprovou um novo medicamento para o tratamento de câncer que apresenta resultados promissores em testes clínicos. O fármaco oferece esperança para pacientes com tumores agressivos e resistentes aos tratamentos convencionais.",
-      "fonte": [
-        {
-          "nome": "ANVISA",
-          "url": "https://www.anvisa.gov.br/noticias/2026/04/13/medicamento-cancer"
-        },
-        {
-          "nome": "Folha de S.Paulo",
-          "url": "https://www1.folha.uol.com.br/equilibrio/saude/2026/04/13/novo-medicamento-cancer.shtml"
-        }
-      ],
-      "potencialViral": "Alto",
-      "justificativa": "Notícias sobre avanços médicos e tratamentos de doenças graves como câncer geram grande engajamento emocional e compartilhamento entre pessoas afetadas e suas redes.",
-      "publicoAlvo": "Pacientes com câncer, familiares de pacientes, profissionais de saúde, pessoas preocupadas com saúde pública",
-      "anguloEditorial": "Explicar o que é o novo medicamento, como funciona, quais são os resultados dos testes clínicos e as perspectivas para pacientes",
-      "tituloRedes": "Nova esperança! Medicamento revolucionário para câncer é aprovado no Brasil!",
-      "legenda": "💊 ANVISA aprova novo medicamento para tratamento de câncer! Esperança para milhares de pacientes com tumores agressivos. Entenda como funciona essa inovação.",
-      "hashtags": ["#Saude", "#Cancer", "#Medicamento", "#ANVISA", "#Inovacao", "#SaudePublica", "#BrasilSemFiltro"],
-      "categoria": "Saúde",
+      "justificativa": "Notícias sobre mudanças climáticas e seus impactos diretos geram grande preocupação e engajamento, especialmente em contextos de crise que afetam economia e política.",
+      "publicoAlvo": "Ambientalistas, agricultores, profissionais de economia, cidadãos preocupados com clima, analistas de política ambiental",
+      "anguloEditorial": "Apresentar dados científicos sobre temperatura recorde, explicar fenômeno El Niño, discutir implicações para agricultura, energia e política ambiental",
+      "tituloRedes": "Recorde de calor no Brasil: Impactos na economia e na política ambiental!",
+      "legenda": "🌡️ Brasil registra temperatura RECORDE em 2026! El Niño intensifica ondas de calor que afetam agricultura, energia e economia. Especialistas alertam para necessidade de ação urgente.",
+      "hashtags": ["#MudancasClimaticas", "#PoliticaAmbiental", "#Clima", "#Economia", "#Sustentabilidade", "#Brasil", "#BrasilSemFiltro"],
+      "categoria": "Política Ambiental",
       "impacto": "Muito Alto"
     },
     {
-      "id": 13,
-      "titulo": "Universidades federais anunciam greve por reajuste salarial",
-      "subtitulo": "Professores reivindicam melhoria de condições",
-      "resumo": "Professores das universidades federais anunciaram greve para reivindicar reajuste salarial e melhoria nas condições de trabalho. A paralisação pode impactar o calendário acadêmico e afeta milhares de estudantes em todo o país.",
+      "id": 10,
+      "titulo": "Universidades federais anunciam greve por reajuste salarial: Impacto em educação superior",
+      "subtitulo": "Professores reivindicam melhoria de condições e financiamento da educação",
+      "resumo": "Professores das universidades federais anunciaram greve para reivindicar reajuste salarial e melhoria nas condições de trabalho. A paralisação pode impactar calendário acadêmico e afeta milhares de estudantes em todo o país.",
       "fonte": [
         {
           "nome": "ANDES-SN",
@@ -316,20 +241,20 @@
         }
       ],
       "potencialViral": "Médio/Alto",
-      "justificativa": "Notícias sobre greves em universidades federais geram interesse entre estudantes, professores e pessoas preocupadas com educação, especialmente em contexto de crise econômica.",
-      "publicoAlvo": "Estudantes universitários, professores, pais de estudantes, profissionais da educação, pessoas interessadas em política educacional",
-      "anguloEditorial": "Explicar as reivindicações dos professores, o contexto econômico e as possíveis consequências para o calendário acadêmico",
-      "tituloRedes": "Greve nas universidades federais: O que muda para os estudantes?",
-      "legenda": "📚 Professores das universidades federais anunciam greve por reajuste salarial! Estudantes podem ser afetados. Entenda o contexto dessa mobilização.",
-      "hashtags": ["#Educacao", "#Universidade", "#Greve", "#Professores", "#PoliticaEducacional", "#Brasil", "#BrasilSemFiltro"],
-      "categoria": "Educação",
+      "justificativa": "Notícias sobre greves em universidades federais geram interesse entre estudantes, professores e pessoas preocupadas com política educacional e financiamento público.",
+      "publicoAlvo": "Estudantes universitários, professores, pais de estudantes, profissionais da educação, analistas de política educacional",
+      "anguloEditorial": "Explicar as reivindicações dos professores, contexto de financiamento da educação superior e possíveis consequências para calendário acadêmico",
+      "tituloRedes": "Greve nas universidades federais: Educação superior em debate!",
+      "legenda": "📚 Professores das universidades federais anunciam greve por reajuste salarial! Estudantes podem ser afetados. Entenda o contexto dessa mobilização por melhor financiamento.",
+      "hashtags": ["#Educacao", "#Universidade", "#Greve", "#PoliticaEducacional", "#Financiamento", "#Brasil", "#BrasilSemFiltro"],
+      "categoria": "Política",
       "impacto": "Alto"
     },
     {
-      "id": 14,
-      "titulo": "Mercado imobiliário registra queda de 15% nas vendas",
-      "subtitulo": "Crise econômica afeta setor de construção civil",
-      "resumo": "O mercado imobiliário brasileiro registrou queda de 15% nas vendas de imóveis em comparação com o período anterior. A crise econômica, aliada aos altos juros, desestimula o investimento em propriedades e afeta construtoras e imobiliárias.",
+      "id": 11,
+      "titulo": "Mercado imobiliário registra queda de 15% nas vendas: Crise econômica afeta setor",
+      "subtitulo": "Altos juros e crise econômica desestimulam investimento em propriedades",
+      "resumo": "O mercado imobiliário brasileiro registrou queda de 15% nas vendas de imóveis em comparação com período anterior. A crise econômica, aliada aos altos juros, desestimula investimento em propriedades e afeta construtoras e imobiliárias.",
       "fonte": [
         {
           "nome": "CBIC",
@@ -341,20 +266,20 @@
         }
       ],
       "potencialViral": "Médio",
-      "justificativa": "Notícias sobre o mercado imobiliário geram interesse entre pessoas que desejam comprar imóvel, investidores e profissionais do setor, mas com alcance mais segmentado.",
-      "publicoAlvo": "Pessoas interessadas em comprar imóvel, investidores imobiliários, profissionais do setor de construção, economistas",
-      "anguloEditorial": "Analisar as causas da queda, o impacto na economia e as perspectivas para o setor nos próximos meses",
-      "tituloRedes": "Mercado imobiliário cai 15%: É hora de comprar ou esperar?",
+      "justificativa": "Notícias sobre mercado imobiliário geram interesse entre pessoas que desejam comprar imóvel, investidores e profissionais do setor, com alcance segmentado mas relevante.",
+      "publicoAlvo": "Pessoas interessadas em comprar imóvel, investidores imobiliários, profissionais do setor de construção, economistas, analistas de mercado",
+      "anguloEditorial": "Analisar as causas da queda, impacto na economia, perspectivas para setor nos próximos meses e relação com política monetária",
+      "tituloRedes": "Mercado imobiliário cai 15%: Crise econômica afeta setor!",
       "legenda": "🏠 Mercado imobiliário registra queda de 15% nas vendas! Juros altos e crise econômica afetam o setor. Entenda o que esperar para os próximos meses.",
-      "hashtags": ["#MercadoImobiliario", "#Imoveis", "#Economia", "#Construcao", "#Investimento", "#Brasil", "#BrasilSemFiltro"],
+      "hashtags": ["#MercadoImobiliario", "#Economia", "#Construcao", "#Investimento", "#Crise", "#Brasil", "#BrasilSemFiltro"],
       "categoria": "Economia",
       "impacto": "Médio"
     },
     {
-      "id": 15,
-      "titulo": "Influenciador digital é investigado por fraude em criptomoedas",
-      "subtitulo": "Esquema enganava seguidores com promessas de lucro",
-      "resumo": "Um influenciador digital com milhões de seguidores está sendo investigado pela polícia por supostamente enganar seus fãs em um esquema de fraude envolvendo criptomoedas. O influenciador prometia lucros garantidos e altos retornos, atraindo investimentos de pessoas desavisadas.",
+      "id": 12,
+      "titulo": "Influenciador digital é investigado por fraude em criptomoedas: Alerta sobre regulação",
+      "subtitulo": "Esquema enganava seguidores com promessas de lucro garantido",
+      "resumo": "Um influenciador digital com milhões de seguidores está sendo investigado pela polícia por supostamente enganar seus fãs em esquema de fraude envolvendo criptomoedas. O influenciador prometia lucros garantidos e altos retornos, atraindo investimentos de pessoas desavisadas.",
       "fonte": [
         {
           "nome": "Polícia Federal",
@@ -367,19 +292,19 @@
       ],
       "potencialViral": "Alto",
       "justificativa": "Notícias sobre fraudes envolvendo influenciadores digitais e criptomoedas geram grande engajamento, especialmente entre usuários de redes sociais e investidores.",
-      "publicoAlvo": "Usuários de redes sociais, investidores em criptomoedas, pessoas preocupadas com fraudes digitais, seguidores do influenciador",
-      "anguloEditorial": "Descrever o esquema de fraude, como funcionava e quais foram as vítimas. Alertar sobre riscos de investimentos em criptomoedas",
-      "tituloRedes": "Influenciador é investigado por fraude em cripto: Cuidado com promessas de lucro fácil!",
-      "legenda": "⚠️ Influenciador com milhões de seguidores é investigado por fraude em criptomoedas! Ele prometia lucros garantidos. Cuidado: lucro fácil não existe!",
-      "hashtags": ["#Fraude", "#Cripto", "#Influenciador", "#Ciberseguranca", "#AlertaFraude", "#RedesSociais", "#BrasilSemFiltro"],
-      "categoria": "Segurança",
+      "publicoAlvo": "Usuários de redes sociais, investidores em criptomoedas, pessoas preocupadas com fraudes digitais, analistas de regulação",
+      "anguloEditorial": "Descrever o esquema de fraude, como funcionava, vítimas, e debater necessidade de regulação de criptomoedas e influenciadores",
+      "tituloRedes": "Influenciador é investigado por fraude em cripto: Alerta sobre regulação!",
+      "legenda": "⚠️ Influenciador com milhões de seguidores é investigado por fraude em criptomoedas! Ele prometia lucros garantidos. Debate sobre regulação de criptos intensifica.",
+      "hashtags": ["#Fraude", "#Cripto", "#Regulacao", "#Economia", "#AlertaFraude", "#RedesSociais", "#BrasilSemFiltro"],
+      "categoria": "Economia",
       "impacto": "Alto"
     },
     {
-      "id": 16,
-      "titulo": "Novo recorde de desemprego atinge 8,2% da população",
-      "subtitulo": "Crise econômica intensifica busca por empregos",
-      "resumo": "O Brasil registrou novo recorde de desemprego, chegando a 8,2% da população economicamente ativa. A crise econômica, combinada com a inflação e altos juros, intensifica a busca por empregos e precariza as condições de trabalho.",
+      "id": 13,
+      "titulo": "Novo recorde de desemprego atinge 8,2% da população: Crise econômica intensifica",
+      "subtitulo": "Inflação, altos juros e crise econômica precarizam mercado de trabalho",
+      "resumo": "O Brasil registrou novo recorde de desemprego, chegando a 8,2% da população economicamente ativa. A crise econômica, combinada com inflação e altos juros, intensifica busca por empregos e precariza condições de trabalho.",
       "fonte": [
         {
           "nome": "IBGE",
@@ -391,114 +316,189 @@
         }
       ],
       "potencialViral": "Alto",
-      "justificativa": "Notícias sobre desemprego geram grande preocupação e engajamento, especialmente em contexto de crise econômica que afeta diretamente a vida das pessoas.",
-      "publicoAlvo": "Desempregados, pessoas em busca de emprego, trabalhadores precários, economistas, pessoas preocupadas com economia",
-      "anguloEditorial": "Apresentar os dados de desemprego, analisar as causas e discutir as políticas necessárias para combater o problema",
-      "tituloRedes": "Desemprego bate recorde de 8,2%: Como se proteger nessa crise?",
+      "justificativa": "Notícias sobre desemprego geram grande preocupação e engajamento, especialmente em contexto de crise econômica que afeta diretamente vida das pessoas.",
+      "publicoAlvo": "Desempregados, pessoas em busca de emprego, trabalhadores precários, economistas, analistas de mercado de trabalho",
+      "anguloEditorial": "Apresentar dados de desemprego, analisar causas, discutir políticas necessárias para combater problema e impacto na economia",
+      "tituloRedes": "Desemprego bate recorde de 8,2%: Crise econômica intensifica!",
       "legenda": "📉 Brasil registra novo recorde de desemprego: 8,2%! A crise econômica intensifica a busca por empregos. Saiba como se preparar nesse cenário desafiador.",
-      "hashtags": ["#Desemprego", "#Economia", "#Emprego", "#CriseBrasileira", "#Trabalho", "#SituacaoEconomica", "#BrasilSemFiltro"],
+      "hashtags": ["#Desemprego", "#Economia", "#Emprego", "#Crise", "#Trabalho", "#Brasil", "#BrasilSemFiltro"],
       "categoria": "Economia",
       "impacto": "Muito Alto"
     },
     {
-      "id": 17,
-      "titulo": "Ator famoso é acusado de assédio sexual por múltiplas vítimas",
-      "subtitulo": "Denúncias abalam indústria do entretenimento",
-      "resumo": "Um ator famoso da indústria do entretenimento brasileiro é acusado de assédio sexual por múltiplas vítimas. As denúncias abalam a indústria e reavivam discussões sobre cultura de abuso e poder desigual em ambientes de trabalho.",
+      "id": 14,
+      "titulo": "Tensão diplomática entre Brasil e país vizinho: Questão de soberania em pauta",
+      "subtitulo": "Disputa sobre limites territoriais gera debate sobre política externa",
+      "resumo": "Tensão diplomática entre Brasil e país vizinho escalou após declarações sobre questões de soberania e limites territoriais. O incidente reaviva debate sobre política externa brasileira e capacidade de defesa dos interesses nacionais.",
       "fonte": [
         {
-          "nome": "G1 Entretenimento",
-          "url": "https://g1.globo.com/entretenimento/noticia/2026/04/13/ator-acusado-assedio.ghtml"
+          "nome": "Itamaraty",
+          "url": "https://www.itamaraty.gov.br/pt-BR/"
         },
         {
-          "nome": "Folha de S.Paulo",
-          "url": "https://www1.folha.uol.com.br/ilustrada/2026/04/13/ator-assedio.shtml"
+          "nome": "G1 Mundo",
+          "url": "https://g1.globo.com/mundo/noticia/2026/04/13/tensao-diplomatica.ghtml"
         }
       ],
       "potencialViral": "Alto",
-      "justificativa": "Notícias sobre acusações de assédio sexual envolvendo celebridades geram grande engajamento, especialmente em contexto de movimentos por justiça e igualdade.",
-      "publicoAlvo": "Fãs de cinema e TV, mulheres preocupadas com assédio, ativistas de direitos humanos, profissionais da indústria do entretenimento",
-      "anguloEditorial": "Descrever as acusações, entrevistar vítimas e especialistas, e discutir a cultura de abuso na indústria do entretenimento",
-      "tituloRedes": "Ator famoso é acusado de assédio sexual: Indústria do entretenimento em xeque!",
-      "legenda": "⚠️ Ator famoso é acusado de assédio sexual por múltiplas vítimas! As denúncias reavivam discussões sobre poder desigual e cultura de abuso na indústria do entretenimento.",
-      "hashtags": ["#Assedio", "#JusticaSocial", "#Entretenimento", "#DireitosHumanos", "#MeToo", "#Celebridade", "#BrasilSemFiltro"],
-      "categoria": "Sociedade",
+      "justificativa": "Notícias sobre tensões diplomáticas e questões de soberania geram grande interesse e debate sobre política externa e defesa de interesses nacionais.",
+      "publicoAlvo": "Cidadãos preocupados com política externa, analistas de relações internacionais, profissionais de diplomacia, eleitores",
+      "anguloEditorial": "Descrever o incidente diplomático, contexto histórico, posição do Brasil e possíveis consequências para relações bilaterais",
+      "tituloRedes": "Tensão diplomática: Brasil defende soberania em disputa territorial!",
+      "legenda": "🇧🇷 Tensão diplomática entre Brasil e país vizinho escalou! Questão de soberania em pauta. Entenda o contexto e as implicações para política externa brasileira.",
+      "hashtags": ["#Geopolitica", "#PoliticaExterna", "#Soberania", "#Diplomacia", "#Brasil", "#RelacoeInternacionais", "#BrasilSemFiltro"],
+      "categoria": "Geopolítica",
+      "impacto": "Alto"
+    },
+    {
+      "id": 15,
+      "titulo": "Reforma administrativa do governo: Mudanças na estrutura do Estado",
+      "subtitulo": "Propostas de reorganização de ministérios geram debate político",
+      "resumo": "O governo apresentou proposta de reforma administrativa que busca reorganizar a estrutura do Estado. A iniciativa visa aumentar eficiência governamental, mas gera debate sobre impacto em serviços públicos e empregos.",
+      "fonte": [
+        {
+          "nome": "Planalto",
+          "url": "https://www.gov.br/planalto/pt-br/"
+        },
+        {
+          "nome": "G1 Política",
+          "url": "https://g1.globo.com/politica/noticia/2026/04/13/reforma-administrativa.ghtml"
+        }
+      ],
+      "potencialViral": "Médio",
+      "justificativa": "Notícias sobre reforma administrativa geram interesse entre servidores públicos, analistas políticos e pessoas preocupadas com eficiência governamental.",
+      "publicoAlvo": "Servidores públicos, analistas políticos, cidadãos interessados em política, profissionais de administração pública",
+      "anguloEditorial": "Explicar as propostas de reforma, objetivos do governo, possíveis impactos em serviços públicos e debate sobre eficiência estatal",
+      "tituloRedes": "Governo propõe reforma administrativa: Mudanças na estrutura do Estado!",
+      "legenda": "🏛️ O governo apresentou proposta de reforma administrativa! Reorganização de ministérios busca aumentar eficiência. Entenda as mudanças propostas.",
+      "hashtags": ["#ReformaAdministrativa", "#Governo", "#PoliticaBrasil", "#Administracao", "#Estado", "#Reforma", "#BrasilSemFiltro"],
+      "categoria": "Política",
+      "impacto": "Médio"
+    },
+    {
+      "id": 16,
+      "titulo": "Congresso debate reforma previdenciária: Futuro da seguridade social em questão",
+      "subtitulo": "Discussão sobre sustentabilidade do sistema previdenciário intensifica",
+      "resumo": "O Congresso Nacional iniciou debates sobre reforma previdenciária. A discussão envolve questões de sustentabilidade do sistema, idade mínima de aposentadoria e contribuições, gerando polarização entre governo, oposição e sociedade civil.",
+      "fonte": [
+        {
+          "nome": "Câmara dos Deputados",
+          "url": "https://www2.camara.leg.br/noticias/2026/04/13/reforma-previdenciaria"
+        },
+        {
+          "nome": "Senado Federal",
+          "url": "https://www12.senado.leg.br/noticias/2026/04/13/previdencia"
+        }
+      ],
+      "potencialViral": "Alto",
+      "justificativa": "Notícias sobre reforma previdenciária geram grande engajamento devido ao impacto direto na vida de trabalhadores, aposentados e futuros beneficiários.",
+      "publicoAlvo": "Trabalhadores, aposentados, pessoas próximas da aposentadoria, analistas políticos, profissionais de economia",
+      "anguloEditorial": "Explicar as propostas de reforma, questões de sustentabilidade, impacto para diferentes gerações e debate sobre futuro da seguridade social",
+      "tituloRedes": "Reforma previdenciária em debate: Futuro da aposentadoria em questão!",
+      "legenda": "🔔 Congresso debate reforma previdenciária! Sustentabilidade do sistema em pauta. Entenda como isso afeta seu futuro e a seguridade social.",
+      "hashtags": ["#ReformaPrevidenciaria", "#Previdencia", "#Aposentadoria", "#PoliticaBrasil", "#Economia", "#Seguridade", "#BrasilSemFiltro"],
+      "categoria": "Política",
+      "impacto": "Muito Alto"
+    },
+    {
+      "id": 17,
+      "titulo": "Sanções econômicas contra país rival: Impacto no comércio internacional",
+      "subtitulo": "Medidas de retaliação econômica escalam tensão geopolítica",
+      "resumo": "Sanções econômicas foram impostas contra país rival em resposta a ações consideradas hostis. As medidas afetam comércio internacional, investimentos e relações diplomáticas, com possíveis reflexos na economia brasileira.",
+      "fonte": [
+        {
+          "nome": "Poder360",
+          "url": "https://www.poder360.com.br/poder-internacional/"
+        },
+        {
+          "nome": "BBC Brasil",
+          "url": "https://www.bbc.com/portuguese/"
+        }
+      ],
+      "potencialViral": "Alto",
+      "justificativa": "Notícias sobre sanções econômicas e conflitos geopolíticos geram grande interesse devido ao impacto potencial na economia global e brasileira.",
+      "publicoAlvo": "Investidores, empresários, economistas, analistas de relações internacionais, cidadãos preocupados com economia",
+      "anguloEditorial": "Descrever as sanções impostas, contexto do conflito, impacto no comércio internacional e possíveis reflexos para economia brasileira",
+      "tituloRedes": "Sanções econômicas escalam tensão geopolítica: Impacto no comércio!",
+      "legenda": "🌍 Sanções econômicas foram impostas em resposta a ações hostis! Medidas afetam comércio internacional e economia global. Entenda as implicações.",
+      "hashtags": ["#Geopolitica", "#Economia", "#Comercio", "#Sancoes", "#RelacoeInternacionais", "#Tensao", "#BrasilSemFiltro"],
+      "categoria": "Geopolítica",
       "impacto": "Alto"
     },
     {
       "id": 18,
-      "titulo": "Novo aplicativo revoluciona forma de pagamento entre pessoas",
-      "subtitulo": "Tecnologia blockchain simplifica transferências",
-      "resumo": "Um novo aplicativo de pagamento baseado em tecnologia blockchain foi lançado no Brasil, prometendo revolucionar a forma como as pessoas transferem dinheiro entre si. O app oferece taxas mais baixas e maior segurança em comparação com métodos tradicionais.",
+      "titulo": "Eleições municipais 2026: Campanha política intensifica polarização",
+      "subtitulo": "Preparação para pleito municipal movimenta cenário político",
+      "resumo": "Com a aproximação das eleições municipais de 2026, a campanha política intensifica e polarização aumenta. Candidatos de diferentes espectros políticos buscam apoio de eleitores em contexto de crise econômica e descontentamento.",
       "fonte": [
         {
-          "nome": "TechCrunch Brasil",
-          "url": "https://techcrunch.com.br/2026/04/13/novo-app-pagamento"
-        },
-        {
-          "nome": "Startupi",
-          "url": "https://www.startupi.com.br/2026/04/13/app-blockchain-pagamento"
-        }
-      ],
-      "potencialViral": "Médio",
-      "justificativa": "Notícias sobre inovações em tecnologia de pagamento geram interesse entre usuários de smartphones, profissionais de finanças e pessoas interessadas em tecnologia.",
-      "publicoAlvo": "Usuários de smartphones, profissionais de finanças, investidores em startups, pessoas interessadas em inovação tecnológica",
-      "anguloEditorial": "Explicar como o novo aplicativo funciona, quais são suas vantagens e como ele se compara com soluções existentes",
-      "tituloRedes": "Novo app revoluciona pagamentos: Transferências mais rápidas e seguras!",
-      "legenda": "💳 Novo aplicativo de pagamento com blockchain chega ao Brasil! Taxas mais baixas, segurança aumentada e transferências instantâneas entre pessoas.",
-      "hashtags": ["#Fintech", "#Blockchain", "#Pagamento", "#Inovacao", "#Tecnologia", "#DigitalBrasil", "#BrasilSemFiltro"],
-      "categoria": "Tecnologia",
-      "impacto": "Médio"
-    },
-    {
-      "id": 19,
-      "titulo": "Pesquisa revela que 60% dos brasileiros sofrem com ansiedade",
-      "subtitulo": "Saúde mental em crise no país",
-      "resumo": "Uma pesquisa nacional revelou que 60% dos brasileiros sofrem com ansiedade, um aumento significativo em relação aos anos anteriores. A crise econômica, pandemia e pressões sociais são apontadas como principais causas do problema de saúde mental.",
-      "fonte": [
-        {
-          "nome": "Associação Brasileira de Psiquiatria",
-          "url": "https://www.abp.org.br/noticias/2026/04/13/ansiedade-brasil"
-        },
-        {
-          "nome": "G1 Bem Estar",
-          "url": "https://g1.globo.com/bemestar/noticia/2026/04/13/ansiedade-brasil.ghtml"
-        }
-      ],
-      "potencialViral": "Alto",
-      "justificativa": "Notícias sobre saúde mental e ansiedade geram grande engajamento, especialmente em contexto de crise econômica e social que afeta o bem-estar psicológico.",
-      "publicoAlvo": "Pessoas com ansiedade, profissionais de saúde mental, pessoas preocupadas com bem-estar, estudantes",
-      "anguloEditorial": "Apresentar os dados da pesquisa, discutir as causas da ansiedade e oferecer orientações sobre como lidar com o problema",
-      "tituloRedes": "60% dos brasileiros sofrem com ansiedade: Como lidar com isso?",
-      "legenda": "😰 Pesquisa revela que 60% dos brasileiros sofrem com ansiedade! Crise econômica e pressões sociais intensificam o problema. Saiba como cuidar da sua saúde mental.",
-      "hashtags": ["#SaudeMental", "#Ansiedade", "#BemEstar", "#Psicologia", "#CuidadoComVoce", "#MentallHealth", "#BrasilSemFiltro"],
-      "categoria": "Saúde",
-      "impacto": "Alto"
-    },
-    {
-      "id": 20,
-      "titulo": "Projeto de lei busca regulamentar trabalho de influenciadores digitais",
-      "subtitulo": "Governo quer estabelecer direitos e deveres",
-      "resumo": "Um novo projeto de lei foi apresentado no Congresso Nacional com o objetivo de regulamentar a profissão de influenciador digital. A legislação busca estabelecer direitos trabalhistas, deveres fiscais e proteção contra exploração para os profissionais do setor.",
-      "fonte": [
-        {
-          "nome": "Câmara dos Deputados",
-          "url": "https://www2.camara.leg.br/noticias/2026/04/13/projeto-influenciadores"
+          "nome": "TSE",
+          "url": "https://www.tse.jus.br/"
         },
         {
           "nome": "G1 Política",
-          "url": "https://g1.globo.com/politica/noticia/2026/04/13/projeto-influenciadores.ghtml"
+          "url": "https://g1.globo.com/politica/"
+        }
+      ],
+      "potencialViral": "Alto",
+      "justificativa": "Notícias sobre eleições municipais geram grande engajamento político, especialmente em contexto de polarização e crise econômica.",
+      "publicoAlvo": "Eleitores, ativistas políticos, candidatos, analistas políticos, cidadãos interessados em política local",
+      "anguloEditorial": "Analisar o cenário das eleições municipais, principais candidatos, temas em debate e impacto da crise econômica na campanha",
+      "tituloRedes": "Eleições municipais 2026: Campanha política intensifica polarização!",
+      "legenda": "🗳️ Eleições municipais 2026 se aproximam! Campanha política intensifica em contexto de crise econômica. Entenda o cenário político local.",
+      "hashtags": ["#Eleicoes2026", "#PoliticaLocal", "#Campanha", "#Eleitor", "#Democracia", "#Brasil", "#BrasilSemFiltro"],
+      "categoria": "Política",
+      "impacto": "Alto"
+    },
+    {
+      "id": 19,
+      "titulo": "Acordo comercial bilateral: Brasil negocia novo tratado com parceiro econômico",
+      "subtitulo": "Negociações buscam expandir relações comerciais e investimentos",
+      "resumo": "O Brasil está negociando novo acordo comercial bilateral com parceiro econômico importante. As negociações buscam expandir relações comerciais, atrair investimentos e fortalecer posição brasileira no comércio internacional.",
+      "fonte": [
+        {
+          "nome": "Ministério da Economia",
+          "url": "https://www.gov.br/economia/pt-br/"
+        },
+        {
+          "nome": "Valor Econômico",
+          "url": "https://www.valor.com.br/"
         }
       ],
       "potencialViral": "Médio",
-      "justificativa": "Notícias sobre regulamentação de influenciadores digitais geram interesse entre criadores de conteúdo, profissionais de marketing digital e pessoas interessadas em política trabalhista.",
-      "publicoAlvo": "Influenciadores digitais, criadores de conteúdo, profissionais de marketing digital, pessoas interessadas em direitos trabalhistas",
-      "anguloEditorial": "Explicar os pontos principais do projeto de lei, como ele afeta os influenciadores e qual é a importância da regulamentação",
-      "tituloRedes": "Novo projeto de lei regulamenta profissão de influenciador digital!",
-      "legenda": "📱 Congresso apresenta projeto de lei para regulamentar influenciadores digitais! Direitos trabalhistas, deveres fiscais e proteção contra exploração em pauta.",
-      "hashtags": ["#Influenciadores", "#RedesSociais", "#Lei", "#DireitosTrabalhistas", "#DigitalBrasil", "#Politica", "#BrasilSemFiltro"],
-      "categoria": "Política",
+      "justificativa": "Notícias sobre acordos comerciais geram interesse entre empresários, investidores e profissionais de economia e relações internacionais.",
+      "publicoAlvo": "Empresários, investidores, economistas, profissionais de comércio exterior, analistas de relações internacionais",
+      "anguloEditorial": "Explicar os termos do acordo, benefícios esperados para economia brasileira, impacto em diferentes setores e perspectivas para comércio bilateral",
+      "tituloRedes": "Brasil negocia novo acordo comercial: Expansão de relações econômicas!",
+      "legenda": "🤝 Brasil está negociando novo acordo comercial bilateral! Negociações buscam expandir comércio e atrair investimentos. Entenda os benefícios esperados.",
+      "hashtags": ["#Economia", "#Comercio", "#Acordo", "#Investimento", "#RelacoeInternacionais", "#Brasil", "#BrasilSemFiltro"],
+      "categoria": "Economia",
       "impacto": "Médio"
+    },
+    {
+      "id": 20,
+      "titulo": "Crise política em país vizinho: Instabilidade afeta região e Brasil",
+      "subtitulo": "Turbulência política gera preocupação com estabilidade regional",
+      "resumo": "Crise política em país vizinho intensificou com protestos, demissões ministeriais e instabilidade institucional. A situação gera preocupação com estabilidade regional e possíveis impactos para Brasil, especialmente em relações diplomáticas e comércio.",
+      "fonte": [
+        {
+          "nome": "Poder360",
+          "url": "https://www.poder360.com.br/poder-internacional/"
+        },
+        {
+          "nome": "G1 Mundo",
+          "url": "https://g1.globo.com/mundo/"
+        }
+      ],
+      "potencialViral": "Alto",
+      "justificativa": "Notícias sobre crises políticas em países vizinhos geram grande interesse devido ao impacto potencial para estabilidade regional e Brasil.",
+      "publicoAlvo": "Cidadãos preocupados com estabilidade regional, analistas de relações internacionais, investidores, profissionais de diplomacia",
+      "anguloEditorial": "Descrever a crise política, causas da instabilidade, possíveis consequências para país vizinho e impacto para Brasil e região",
+      "tituloRedes": "Crise política em país vizinho: Instabilidade afeta região!",
+      "legenda": "🌎 Crise política em país vizinho intensifica! Instabilidade institucional gera preocupação com estabilidade regional. Entenda o impacto para Brasil.",
+      "hashtags": ["#Geopolitica", "#CrisePolitica", "#EstabilidadeRegional", "#RelacoeInternacionais", "#Brasil", "#Vizinhos", "#BrasilSemFiltro"],
+      "categoria": "Geopolítica",
+      "impacto": "Alto"
     }
   ]
 }
