@@ -1,0 +1,3 @@
+Contact: security@brasilreport.manus.space
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: pt-BR
