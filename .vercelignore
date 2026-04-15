@@ -1,0 +1,5 @@
+server.bak
+shared
+.git
+node_modules
+.env.local
