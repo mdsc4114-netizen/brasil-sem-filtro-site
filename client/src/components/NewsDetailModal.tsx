@@ -120,50 +120,50 @@ ${noticia.fonte.map((f) => `${f.nome}: ${f.url}`).join("\n")}
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-4xl max-h-[90vh]">
+      <DialogContent className="w-full max-w-4xl max-h-[90vh] mx-auto px-4 sm:px-6">
         <DialogHeader>
-          <div className="flex items-start justify-between gap-4">
-            <div className="flex-1">
-              <DialogTitle className="font-display text-3xl mb-2">
+          <div className="flex flex-col sm:flex-row items-start justify-between gap-4">
+            <div className="flex-1 min-w-0">
+              <DialogTitle className="font-display text-2xl sm:text-3xl mb-2 break-words">
                 {noticia.titulo}
               </DialogTitle>
               <p className="text-sm font-semibold text-accent">
                 {noticia.subtitulo}
               </p>
             </div>
-            <Badge variant="outline" className="whitespace-nowrap">
+            <Badge variant="outline" className="whitespace-nowrap flex-shrink-0">
               {noticia.potencialViral}
             </Badge>
           </div>
         </DialogHeader>
 
-        <ScrollArea className="h-[calc(90vh-200px)] pr-4">
-          <div className="space-y-6">
+        <ScrollArea className="h-[calc(90vh-200px)] pr-2 sm:pr-4">
+          <div className="space-y-4 sm:space-y-6">
             {/* Resumo */}
             <div>
-              <h3 className="font-display text-lg font-bold mb-2 text-primary">
+              <h3 className="font-display text-base sm:text-lg font-bold mb-2 text-primary">
                 Resumo
               </h3>
-              <p className="text-sm text-foreground leading-relaxed">
+              <p className="text-xs sm:text-sm text-foreground leading-relaxed">
                 {noticia.resumo}
               </p>
             </div>
 
             {/* Análise */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               <div>
-                <h3 className="font-display text-lg font-bold mb-2 text-primary">
-                  Justificativa de Viralização
-                </h3>
-                <p className="text-sm text-foreground leading-relaxed">
+              <h3 className="font-display text-base sm:text-lg font-bold mb-2 text-primary">
+                Justificativa de Viralização
+              </h3>
+              <p className="text-xs sm:text-sm text-foreground leading-relaxed">
                   {noticia.justificativa}
                 </p>
               </div>
               <div>
-                <h3 className="font-display text-lg font-bold mb-2 text-primary">
-                  Público-Alvo
-                </h3>
-                <p className="text-sm text-foreground leading-relaxed">
+              <h3 className="font-display text-base sm:text-lg font-bold mb-2 text-primary">
+                Público-Alvo
+              </h3>
+              <p className="text-xs sm:text-sm text-foreground leading-relaxed">
                   {noticia.publicoAlvo}
                 </p>
               </div>
@@ -171,17 +171,17 @@ ${noticia.fonte.map((f) => `${f.nome}: ${f.url}`).join("\n")}
 
             {/* Ângulo Editorial */}
             <div>
-              <h3 className="font-display text-lg font-bold mb-2 text-primary">
+              <h3 className="font-display text-base sm:text-lg font-bold mb-2 text-primary">
                 Ângulo Editorial Imparcial
               </h3>
-              <p className="text-sm text-foreground leading-relaxed">
+              <p className="text-xs sm:text-sm text-foreground leading-relaxed">
                 {noticia.anguloEditorial}
               </p>
             </div>
 
             {/* Conteúdo para Redes Sociais */}
             <div className="bg-secondary p-4 rounded-lg">
-              <h3 className="font-display text-lg font-bold mb-3 text-primary">
+              <h3 className="font-display text-base sm:text-lg font-bold mb-3 text-primary">
                 Conteúdo para Redes Sociais
               </h3>
 
@@ -191,7 +191,7 @@ ${noticia.fonte.map((f) => `${f.nome}: ${f.url}`).join("\n")}
                     Título
                   </p>
                   <div className="flex gap-2">
-                    <p className="text-sm font-semibold text-foreground flex-1">
+                    <p className="text-xs sm:text-sm font-semibold text-foreground flex-1 break-words">
                       {noticia.tituloRedes}
                     </p>
                     <Button
@@ -209,7 +209,7 @@ ${noticia.fonte.map((f) => `${f.nome}: ${f.url}`).join("\n")}
                     Legenda
                   </p>
                   <div className="flex gap-2">
-                    <p className="text-sm text-foreground flex-1 whitespace-pre-wrap">
+                    <p className="text-xs sm:text-sm text-foreground flex-1 whitespace-pre-wrap break-words">
                       {noticia.legenda}
                     </p>
                     <Button
@@ -250,7 +250,7 @@ ${noticia.fonte.map((f) => `${f.nome}: ${f.url}`).join("\n")}
 
             {/* Fontes */}
             <div>
-              <h3 className="font-display text-lg font-bold mb-2 text-primary">
+              <h3 className="font-display text-base sm:text-lg font-bold mb-2 text-primary">
                 Fontes Confiáveis
               </h3>
               <div className="space-y-2">
@@ -276,7 +276,7 @@ ${noticia.fonte.map((f) => `${f.nome}: ${f.url}`).join("\n")}
         </ScrollArea>
 
         {/* Ações */}
-        <div className="flex gap-2 pt-4 border-t flex-wrap">
+        <div className="flex flex-col sm:flex-row gap-2 pt-4 border-t">
           <Button variant="outline" size="sm" onClick={handleExportPDF}>
             <FileText className="w-4 h-4 mr-2" />
             Análise PDF
@@ -289,7 +289,7 @@ ${noticia.fonte.map((f) => `${f.nome}: ${f.url}`).join("\n")}
             <Download className="w-4 h-4 mr-2" />
             TXT
           </Button>
-          <Button variant="default" className="flex-1" onClick={() => onOpenChange(false)}>
+          <Button variant="default" className="w-full sm:flex-1" onClick={() => onOpenChange(false)}>
             Fechar
           </Button>
         </div>
