@@ -54,7 +54,7 @@ export function ExportModal({ isOpen, onClose, noticia }: ExportModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="w-[min(96vw,56rem)] max-w-none max-h-[90dvh] overflow-y-auto p-4 sm:p-6">
         <DialogHeader>
           <DialogTitle>Exportar Notícia para PDF</DialogTitle>
         </DialogHeader>
