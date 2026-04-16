@@ -29,6 +29,8 @@ interface ExportModalProps {
 }
 
 export function ExportModal({ isOpen, onClose, noticia }: ExportModalProps) {
+  if (!isOpen) return null;
+  
   const [tema, setTema] = useState<'claro' | 'escuro'>('claro');
   const [preview, setPreview] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
