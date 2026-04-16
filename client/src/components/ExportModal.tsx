@@ -54,78 +54,31 @@ export function ExportModal({ isOpen, onClose, noticia }: ExportModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="w-[min(96vw,72rem)] max-w-none h-[90dvh] p-0 overflow-hidden">
-  <div className="flex h-full flex-col">
-    <DialogHeader className="px-4 sm:px-6 pt-4 sm:pt-6 pb-3 border-b">
-      <DialogTitle>Exportar Notícia para PDF</DialogTitle>
-    </DialogHeader>
+  <DialogPortal>
+    <DialogOverlay className="fixed inset-0 bg-black/50 backdrop-blur-sm" />
 
-    <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          {/* Seletor de Tema */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Selecione o Tema</h3>
-            <RadioGroup value={tema} onValueChange={handleTemaChange}>
-              <div className="flex items-center space-x-2 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
-                <RadioGroupItem value="claro" id="tema-claro" />
-                <Label htmlFor="tema-claro" className="cursor-pointer flex-1">
-                  <div className="font-medium">Tema Claro</div>
-                  <div className="text-sm text-gray-600">Fundo branco com texto escuro</div>
-                </Label>
-              </div>
+    <DialogContent className="fixed left-1/2 top-1/2 w-[min(96vw,72rem)] max-w-none h-[90dvh] -translate-x-1/2 -translate-y-1/2 p-0 overflow-hidden">
+      <div className="flex h-full flex-col">
 
-              <div className="flex items-center space-x-2 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
-                <RadioGroupItem value="escuro" id="tema-escuro" />
-                <Label htmlFor="tema-escuro" className="cursor-pointer flex-1">
-                  <div className="font-medium">Tema Escuro</div>
-                  <div className="text-sm text-gray-600">Fundo escuro com texto claro</div>
-                </Label>
-              </div>
-            </RadioGroup>
-          </div>
+        <DialogHeader className="px-4 sm:px-6 pt-4 sm:pt-6 pb-3 border-b">
+          <DialogTitle>Exportar Notícia para PDF</DialogTitle>
+        </DialogHeader>
 
-          <div className="space-y-3 mt-6">
-            <h3 className="font-semibold">Informações do PDF</h3>
-            <div className="text-sm space-y-2 text-gray-600">
-              <p>✓ 1 página por notícia</p>
-              <p>✓ Fontes otimizadas para leitura</p>
-              <p>✓ QR code do canal incluído</p>
-              <p>✓ Compatível com WhatsApp</p>
-            </div>
-          </div>
+        <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-4">
+          {/* Conteúdo atual do modal */}
+        </div>
 
-          <Button onClick={handleExportar} className="w-full mt-6" size="lg">
-            Exportar PDF
+        <div className="px-4 sm:px-6 py-3 border-t">
+          <Button
+            onClick={onClose}
+            variant="outline"
+            className="w-full"
+          >
+            Fechar
           </Button>
         </div>
 
-        <div className="space-y-4">
-          <h3 className="font-semibold text-lg">Pré-visualização</h3>
-          <div className="border rounded-lg bg-gray-100 p-2 h-[500px] overflow-y-auto flex items-center justify-center">
-            {loading ? (
-              <div className="text-gray-500">Gerando pré-visualização...</div>
-            ) : preview ? (
-              <img src={preview} alt="Preview PDF" className="max-w-full h-auto" />
-            ) : (
-              <div className="text-gray-500">Selecione um tema para visualizar</div>
-            )}
-          </div>
-        </div>
       </div>
-    </div>
-
-    <div className="px-4 sm:px-6 py-3 border-t">
-      <Button
-        onClick={onClose}
-        variant="outline"
-        className="w-full"
-      >
-        Fechar
-      </Button>
-    </div>
-  </div>
-</DialogContent>
-    </Dialog>
-  );
-}
+    </DialogContent>
+  </DialogPortal>
+</Dialog>
